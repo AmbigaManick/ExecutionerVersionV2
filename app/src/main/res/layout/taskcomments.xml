@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativelayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3b5998"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:text="Select The Status:"
+        android:textAllCaps="true"
+        android:textColor="#000080"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t1">
+
+        <RadioButton
+            android:id="@+id/rp1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup5"
+            android:layout_marginLeft="10dp"
+            android:onClick="radio"
+            android:text="Completed"
+            android:textSize="16sp" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rp2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sd1"
+            android:layout_marginLeft="10dp"
+            android:onClick="radio"
+            android:text="Reassign"
+            android:textSize="16sp" />
+
+
+
+
+
+    </RadioGroup>
+
+
+    <TextView
+
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignStart="@+id/editText1"
+        android:layout_below="@+id/radioGroup5"
+        android:text="COMMENTS FOR TASK INCOMPLETE:"
+        android:textColor="#000080"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/text1"
+        android:layout_alignStart="@+id/text1"
+        android:layout_below="@+id/textView9"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_alignRight="@+id/btnupdate2"
+        android:layout_alignEnd="@+id/btnupdate2">
+
+    </EditText>
+
+    <TextView
+
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REASSIGN TASK TO:"
+        android:textColor="#000080"
+        android:visibility="gone"
+        android:layout_below="@+id/radioGroup5"
+        android:layout_alignLeft="@+id/texttype"
+        android:layout_alignStart="@+id/texttype"
+        android:layout_alignRight="@+id/spinner4"
+        android:layout_alignEnd="@+id/spinner4" />
+    <TextView
+
+        android:id="@+id/texttype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE:"
+        android:textColor="#000080"
+        android:visibility="gone"
+        android:layout_below="@+id/text1"
+        android:layout_alignLeft="@+id/spinner4"
+        android:layout_alignStart="@+id/spinner4"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <Spinner
+        android:id="@+id/spinner4"
+        style="@style/spinner_style"
+        android:layout_width="600dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_below="@+id/texttype"
+        android:layout_alignLeft="@+id/t1"
+        android:layout_alignStart="@+id/t1"
+        android:layout_marginTop="11dp" />
+    <TextView
+
+        android:id="@+id/texttype1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(OR)"
+        android:gravity="center"
+        android:textColor="#000080"
+        android:visibility="gone"
+        android:layout_below="@+id/spinner4"
+        android:layout_alignLeft="@+id/t1"
+        android:layout_alignStart="@+id/t1"
+        android:layout_alignRight="@+id/texttype"
+        android:layout_alignEnd="@+id/texttype" />
+    <TextView
+
+        android:id="@+id/texttype2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TYPE:"
+        android:textColor="#000080"
+        android:visibility="gone"
+        android:layout_below="@+id/texttype1"
+        android:layout_alignLeft="@+id/edit"
+        android:layout_alignStart="@+id/edit"
+        android:layout_alignRight="@+id/texttype1"
+        android:layout_alignEnd="@+id/texttype1" />
+
+    <AutoCompleteTextView
+        android:id="@+id/edittype"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/texttype2"
+        android:layout_alignLeft="@+id/texttype2"
+        android:layout_alignStart="@+id/texttype2"
+        android:layout_alignRight="@+id/texttype2"
+        android:layout_alignEnd="@+id/texttype2" />
+
+    <TextView
+
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REASON:"
+        android:textColor="#000080"
+        android:visibility="gone"
+        android:layout_below="@+id/edittype"
+        android:layout_alignLeft="@+id/edit"
+        android:layout_alignStart="@+id/edit" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/spinner4"
+        android:layout_alignStart="@+id/spinner4"
+        android:layout_alignRight="@+id/spinner4"
+        android:layout_alignEnd="@+id/spinner4">
+
+    </EditText>
+
+    <TextView
+
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REASON FOR COMMENT NOT APPLICABLE:"
+        android:textColor="#000080"
+        android:visibility="gone"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/texttype1"
+        android:layout_alignStart="@+id/texttype1" />
+
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/text3"
+        android:layout_marginTop="15dp"
+        android:layout_alignRight="@+id/t1"
+        android:layout_alignEnd="@+id/t1"
+        android:layout_alignLeft="@+id/text3"
+        android:layout_alignStart="@+id/text3">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btnupdate2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btnselector"
+
+        android:text="UPDATE"
+        android:visibility="visible"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+
+
+

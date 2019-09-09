@@ -1,0 +1,267 @@
+TASK anulom.executioner5.com3.anulom id=1759
+  ACTIVITY anulom.executioner5.com3.anulom/.NextActivity 78a9f66 pid=20684
+    Local FragmentActivity c908fa8 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    Active Fragments in 38ccdd1:
+      #0: OlderDetails{e827a5f #0 id=0x7f0f0115 android:switcher:2131689749:1}
+        mFragmentId=#7f0f0115 mContainerId=#7f0f0115 mTag=android:switcher:2131689749:1
+        mState=5 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=false mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=false
+        mFragmentManager=FragmentManager{38ccdd1 in HostCallbacks{a4f8036}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@a4f8036
+        mContainer=android.support.v4.view.ViewPager{cae3b37 VFED..... ........ 0,285-1080,1704 #7f0f0115 app:id/viewpager}
+        mView=android.widget.LinearLayout{fc428a4 V.E...... ........ 1080,0-2160,1419}
+        mInnerView=android.widget.LinearLayout{fc428a4 V.E...... ........ 1080,0-2160,1419}
+        Child FragmentManager{dbf760d in OlderDetails{e827a5f}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@a4f8036
+            mContainer=android.support.v4.app.Fragment$1@b8b69c2
+            mParent=OlderDetails{e827a5f #0 id=0x7f0f0115 android:switcher:2131689749:1}
+            mCurState=5 mStateSaved=false mDestroyed=false
+      #1: TodayDetails{2a153d3 #1 id=0x7f0f0115 android:switcher:2131689749:0}
+        mFragmentId=#7f0f0115 mContainerId=#7f0f0115 mTag=android:switcher:2131689749:0
+        mState=5 mIndex=1 mWho=android:fragment:1 mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{38ccdd1 in HostCallbacks{a4f8036}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@a4f8036
+        mContainer=android.support.v4.view.ViewPager{cae3b37 VFED..... ........ 0,285-1080,1704 #7f0f0115 app:id/viewpager}
+        mView=android.widget.LinearLayout{e6d2b10 V.E...... ........ 0,0-1080,1419}
+        mInnerView=android.widget.LinearLayout{e6d2b10 V.E...... ........ 0,0-1080,1419}
+        Child FragmentManager{5fa6609 in TodayDetails{2a153d3}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@a4f8036
+            mContainer=android.support.v4.app.Fragment$1@aaa600e
+            mParent=TodayDetails{2a153d3 #1 id=0x7f0f0115 android:switcher:2131689749:0}
+            mCurState=5 mStateSaved=false mDestroyed=false
+    Added Fragments:
+      #0: TodayDetails{2a153d3 #1 id=0x7f0f0115 android:switcher:2131689749:0}
+      #1: OlderDetails{e827a5f #0 id=0x7f0f0115 android:switcher:2131689749:1}
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@a4f8036
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@a4f8036
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.DecorView{ca35a2f V.E..... ... 0,0-1080,1920}
+        android.widget.LinearLayout{661e83c V.E..... ... 0,0-1080,1776}
+          android.view.ViewStub{6da59c5 G.E..... ... 0,0-0,0 #10203ef android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{5b06f1a V.E..... ... 0,72-1080,1776}
+            android.support.v7.widget.FitWindowsLinearLayout{6156a4b V.E..... ... 0,0-1080,1704 #7f0f007c app:id/action_bar_root}
+              android.support.v7.widget.ViewStubCompat{e834c28 G.E..... ... 0,0-0,0 #7f0f007d app:id/action_mode_bar_stub}
+              android.support.v7.widget.ContentFrameLayout{e0bcd41 V.E..... ... 0,0-1080,1704 #1020002 android:id/content}
+                android.support.design.widget.CoordinatorLayout{4d662e6 V.E..... ... 0,0-1080,1704}
+                  android.support.design.widget.AppBarLayout{54e6027 V.E..... ... 0,0-1080,273 #7f0f010f app:id/table}
+                    android.support.v7.widget.Toolbar{8d502d4 V.E..... ... 0,0-1080,168 #7f0f0090 app:id/toolbar}
+                      android.widget.TextView{d86fc7d V.ED.... ... 148,43-384,124}
+                      android.widget.ImageView{915c772 V.ED.... ... 48,23-148,145}
+                      android.support.v7.widget.ActionMenuView{536d7c3 V.E..... ... 648,0-1080,168}
+                        android.support.v7.view.menu.ActionMenuItemView{1e97840 VFED..CL ... 0,12-168,156 #7f0f01ad app:id/search}
+                        android.support.v7.view.menu.ActionMenuItemView{48be379 VFED..CL ... 168,12-312,156 #7f0f01ae app:id/action_refresh}
+                        android.support.v7.widget.ActionMenuPresenter$OverflowMenuButton{774e8be VFED..C. ... 312,12-432,156}
+                    android.widget.TableLayout{ca52d1f V.E..... ... 0,168-1080,273}
+                      android.widget.TableRow{b0dd86c V.E..... ... 0,0-1080,105}
+                        android.support.v7.widget.AppCompatTextView{c5e3e35 V.ED.... ... 0,24-0,129 #7f0f0110 app:id/textView}
+                        android.support.v7.widget.AppCompatTextView{d12d2ca V.ED.... ... 0,5-540,110 #7f0f00d0 app:id/textView1}
+                        android.support.v7.widget.AppCompatButton{f797c3b VFED..C. ... 540,0-675,105 #7f0f0111 app:id/button1}
+                        android.support.v7.widget.AppCompatButton{b360f58 VFED..C. ... 675,0-810,105 #7f0f0112 app:id/button2}
+                        android.support.v7.widget.AppCompatButton{4c188b1 VFED..C. ... 810,0-945,105 #7f0f0113 app:id/button3}
+                        android.support.v7.widget.AppCompatButton{7f35196 VFED..C. ... 945,0-1080,105 #7f0f0114 app:id/button4}
+                  android.widget.RelativeLayout{579a117 V.E..... ... 0,0-1080,1704}
+                    android.support.v4.view.ViewPager{cae3b37 VFED.... ... 0,285-1080,1704 #7f0f0115 app:id/viewpager}
+                      android.widget.LinearLayout{fc428a4 V.E..... ... 1080,0-2160,1419}
+                        android.widget.ListView{2a8c904 VFED.VC. ... 15,9-1065,1224 #7f0f00d8 app:id/tasklist}
+                          android.widget.LinearLayout{c34feed V.E..... ... 0,0-1050,785}
+                            android.widget.RelativeLayout{8af122 V.E..... ... 0,0-1050,135 #7f0f0178 app:id/relative}
+                              android.widget.TextView{2ed37b3 V.ED..C. ... 24,0-274,120 #7f0f0179 app:id/tvreportKey}
+                              android.widget.Button{d6b7170 VFED..C. ... 618,0-738,135 #7f0f017a app:id/owner2}
+                              android.widget.TextView{fef9ce9 V.ED.... ... 799,7-1050,127 #7f0f017b app:id/tvdate1}
+                              android.widget.Button{afd6e IFED..C. ... 298,24-367,108 #7f0f017c app:id/buttonnotify1}
+                            android.widget.TextView{ef99c0f V.ED..C. ... 0,135-1050,192 #7f0f017d app:id/tvdate2}
+                            android.widget.TextView{6e349c V.ED..C. ... 0,192-1050,249 #7f0f017e app:id/appointment}
+                            android.view.View{f9c1ea5 V.ED.... ... 0,255-1050,258 #7f0f017f app:id/view}
+                            android.widget.LinearLayout{f6d827a V.E...C. ... 0,258-1050,378 #7f0f0180 app:id/layout1}
+                              android.widget.TextView{3bdea2b V.ED.... ... 24,0-372,120 #7f0f0169 app:id/tvowner1}
+                              android.widget.ImageView{d77fe88 V.ED.... ... 372,15-438,90 #7f0f0181 app:id/buttonimg}
+                            android.widget.LinearLayout{d50021 V.E..... ... 0,378-1050,498 #7f0f0182 app:id/layout2}
+                              android.widget.TextView{b414c46 V.ED.... ... 24,0-258,120 #7f0f016a app:id/tvtenant1}
+                              android.widget.ImageView{42efe07 I.ED.... ... 258,15-343,90 #7f0f0183 app:id/buttonimg1}
+                            android.widget.LinearLayout{9d27b34 G.E..... ... 0,0-0,0 #7f0f0184 app:id/contactperson}
+                              android.widget.TextView{e607d5d V.ED.... ... 0,0-0,0 #7f0f0185 app:id/contact1}
+                              android.widget.ImageView{835e6d2 I.ED.... ... 0,0-0,0 #7f0f0186 app:id/buttonimg2}
+                            android.widget.LinearLayout{3b373a3 V.E..... ... 0,513-368,574 #7f0f0187 app:id/biometricStatus}
+                              android.widget.TextView{3b616a0 V.ED.... ... 24,0-368,61 #7f0f0188 app:id/bio1}
+                            android.widget.LinearLayout{f2c9259 V.E..... ... 0,589-214,650 #7f0f0189 app:id/biometricStatus1}
+                              android.widget.TextView{4679e1e V.ED.... ... 24,0-214,61 #7f0f018a app:id/bio2}
+                            android.widget.LinearLayout{b7fa6ff V.E..... ... 0,665-1050,785}
+                              android.widget.LinearLayout{275fccc V.E..... ... 0,0-210,120}
+                                android.widget.TextView{10afb15 V.ED..C. ... 33,0-177,120 #7f0f018b app:id/tvstatus1}
+                              android.widget.LinearLayout{16b7e2a V.E..... ... 210,0-420,120}
+                                android.widget.TextView{9b1b41b V.ED..C. ... 33,0-177,120 #7f0f016b app:id/tvcomment1}
+                              android.widget.LinearLayout{d6c19b8 V.E..... ... 420,0-630,120}
+                                android.widget.TextView{32d3391 V.ED..C. ... 33,0-177,120 #7f0f016d app:id/tvAddpay1}
+                              android.widget.LinearLayout{31b52f6 V.E..... ... 630,0-840,120}
+                                android.widget.TextView{62d76f7 V.ED..C. ... 33,0-177,120 #7f0f016e app:id/tvACVR1}
+                              android.widget.LinearLayout{5a51964 V.E..... ... 840,0-1050,120}
+                                android.widget.TextView{c6077cd V.ED..C. ... 105,0-105,120 #7f0f0170 app:id/tvMap1}
+                          android.widget.LinearLayout{f21a882 V.E..... ... 0,800-1050,1585}
+                            android.widget.RelativeLayout{9388b93 V.E..... ... 0,0-1050,135 #7f0f0178 app:id/relative}
+                              android.widget.TextView{e4c67d0 V.ED..C. ... 24,0-274,120 #7f0f0179 app:id/tvreportKey}
+                              android.widget.Button{909c3c9 VFED..C. ... 618,0-738,135 #7f0f017a app:id/owner2}
+                              android.widget.TextView{945cace V.ED.... ... 799,7-1050,127 #7f0f017b app:id/tvdate1}
+                              android.widget.Button{fd64def IFED..C. ... 298,24-367,108 #7f0f017c app:id/buttonnotify1}
+                            android.widget.TextView{fd830fc V.ED..C. ... 0,135-1050,192 #7f0f017d app:id/tvdate2}
+                            android.widget.TextView{ce1d385 V.ED..C. ... 0,192-1050,249 #7f0f017e app:id/appointment}
+                            android.view.View{877c5da V.ED.... ... 0,255-1050,258 #7f0f017f app:id/view}
+                            android.widget.LinearLayout{9e3da0b V.E...C. ... 0,258-1050,378 #7f0f0180 app:id/layout1}
+                              android.widget.TextView{1f560e8 V.ED.... ... 24,0-372,120 #7f0f0169 app:id/tvowner1}
+                              android.widget.ImageView{4712301 V.ED.... ... 372,15-438,90 #7f0f0181 app:id/buttonimg}
+                            android.widget.LinearLayout{9c65a6 V.E..... ... 0,378-1050,498 #7f0f0182 app:id/layout2}
+                              android.widget.TextView{df40be7 V.ED.... ... 24,0-258,120 #7f0f016a app:id/tvtenant1}
+                              android.widget.ImageView{833a394 I.ED.... ... 258,15-343,90 #7f0f0183 app:id/buttonimg1}
+                            android.widget.LinearLayout{24bee3d G.E..... ... 0,0-0,0 #7f0f0184 app:id/contactperson}
+                              android.widget.TextView{d193632 V.ED.... ... 0,0-0,0 #7f0f0185 app:id/contact1}
+                              android.widget.ImageView{eeb7f83 I.ED.... ... 0,0-0,0 #7f0f0186 app:id/buttonimg2}
+                            android.widget.LinearLayout{d716500 V.E..... ... 0,513-368,574 #7f0f0187 app:id/biometricStatus}
+                              android.widget.TextView{40e3139 V.ED.... ... 24,0-368,61 #7f0f0188 app:id/bio1}
+                            android.widget.LinearLayout{820837e V.E..... ... 0,589-214,650 #7f0f0189 app:id/biometricStatus1}
+                              android.widget.TextView{f5c90df V.ED.... ... 24,0-214,61 #7f0f018a app:id/bio2}
+                            android.widget.LinearLayout{a07d12c V.E..... ... 0,665-1050,785}
+                              android.widget.LinearLayout{b17a7f5 V.E..... ... 0,0-210,120}
+                                android.widget.TextView{abd598a V.ED..C. ... 33,0-177,120 #7f0f018b app:id/tvstatus1}
+                              android.widget.LinearLayout{ea35bfb V.E..... ... 210,0-420,120}
+                                android.widget.TextView{b6d418 V.ED..C. ... 33,0-177,120 #7f0f016b app:id/tvcomment1}
+                              android.widget.LinearLayout{507ce71 V.E..... ... 420,0-630,120}
+                                android.widget.TextView{19f8456 V.ED..C. ... 33,0-177,120 #7f0f016d app:id/tvAddpay1}
+                              android.widget.LinearLayout{bc1bcd7 V.E..... ... 630,0-840,120}
+                                android.widget.TextView{e5119c4 V.ED..C. ... 33,0-177,120 #7f0f016e app:id/tvACVR1}
+                              android.widget.LinearLayout{ff9e0ad V.E..... ... 840,0-1050,120}
+                                android.widget.TextView{2a78fe2 V.ED..C. ... 105,0-105,120 #7f0f0170 app:id/tvMap1}
+                      android.widget.LinearLayout{e6d2b10 V.E..... ... 0,0-1080,1419}
+                        android.widget.ListView{9fb4f73 VFED.VC. F.. 15,9-1065,1224 #7f0f00d8 app:id/tasklist}
+                          android.widget.LinearLayout{8280e30 V.E..... ... 0,-680-1050,225}
+                            android.widget.RelativeLayout{680daa9 V.E..... ... 0,0-1050,135 #7f0f0178 app:id/relative}
+                              android.widget.TextView{f32c82e V.ED..C. ... 24,0-287,120 #7f0f0179 app:id/tvreportKey}
+                              android.widget.Button{3316fcf VFED..C. ... 618,0-738,135 #7f0f017a app:id/owner2}
+                              android.widget.TextView{537dd5c V.ED.... ... 799,7-1050,127 #7f0f017b app:id/tvdate1}
+                              android.widget.Button{f637865 IFED..C. ... 311,24-380,108 #7f0f017c app:id/buttonnotify1}
+                            android.widget.TextView{f27393a V.ED..C. ... 0,135-1050,192 #7f0f017d app:id/tvdate2}
+                            android.widget.TextView{3ff39eb V.ED..C. ... 0,192-1050,249 #7f0f017e app:id/appointment}
+                            android.view.View{e137348 V.ED.... ... 0,255-1050,258 #7f0f017f app:id/view}
+                            android.widget.LinearLayout{d1835e1 V.E..... ... 0,258-1050,378 #7f0f0180 app:id/layout1}
+                              android.widget.TextView{bfaf06 V.ED.... ... 24,0-797,120 #7f0f0169 app:id/tvowner1}
+                              android.widget.ImageView{d9589c7 I.ED.... ... 797,15-855,90 #7f0f0181 app:id/buttonimg}
+                            android.widget.LinearLayout{f907bf4 V.E..... ... 0,378-1050,498 #7f0f0182 app:id/layout2}
+                              android.widget.TextView{9014f1d V.ED.... ... 24,0-601,120 #7f0f016a app:id/tvtenant1}
+                              android.widget.ImageView{917b592 I.ED.... ... 601,15-665,90 #7f0f0183 app:id/buttonimg1}
+                            android.widget.LinearLayout{956fb63 V.E...C. ... 0,498-1050,618 #7f0f0184 app:id/contactperson}
+                              android.widget.TextView{c336360 V.ED.... ... 24,0-202,120 #7f0f0185 app:id/contact1}
+                              android.widget.ImageView{668c019 V.ED.... ... 202,15-357,90 #7f0f0186 app:id/buttonimg2}
+                            android.widget.LinearLayout{17798de V.E..... ... 0,633-368,694 #7f0f0187 app:id/biometricStatus}
+                              android.widget.TextView{a33eabf V.ED.... ... 24,0-368,61 #7f0f0188 app:id/bio1}
+                            android.widget.LinearLayout{85b558c V.E..... ... 0,709-24,770 #7f0f0189 app:id/biometricStatus1}
+                              android.widget.TextView{93c44d5 V.ED.... ... 24,0-24,61 #7f0f018a app:id/bio2}
+                            android.widget.LinearLayout{d6064ea V.E..... ... 0,785-1050,905}
+                              android.widget.LinearLayout{7c673db V.E..... ... 0,0-210,120}
+                                android.widget.TextView{d2e3e78 V.ED..C. ... 33,0-177,120 #7f0f018b app:id/tvstatus1}
+                              android.widget.LinearLayout{c895951 V.E..... ... 210,0-420,120}
+                                android.widget.TextView{557e5b6 V.ED..C. ... 33,0-177,120 #7f0f016b app:id/tvcomment1}
+                              android.widget.LinearLayout{f2e72b7 V.E..... ... 420,0-630,120}
+                                android.widget.TextView{e44ca24 V.ED..C. ... 33,0-177,120 #7f0f016d app:id/tvAddpay1}
+                              android.widget.LinearLayout{4b9398d V.E..... ... 630,0-840,120}
+                                android.widget.TextView{274a742 V.ED..C. ... 33,0-177,120 #7f0f016e app:id/tvACVR1}
+                              android.widget.LinearLayout{5ad8353 V.E..... ... 840,0-1050,120}
+                                android.widget.TextView{e166490 V.ED..C. ... 105,0-105,120 #7f0f0170 app:id/tvMap1}
+                          android.widget.LinearLayout{98ce189 V.E..... ... 0,240-1050,1145}
+                            android.widget.RelativeLayout{6a9f58e V.E..... ... 0,0-1050,135 #7f0f0178 app:id/relative}
+                              android.widget.TextView{90301af V.ED..C. ... 24,0-287,120 #7f0f0179 app:id/tvreportKey}
+                              android.widget.Button{d2539bc VFED..C. ... 618,0-738,135 #7f0f017a app:id/owner2}
+                              android.widget.TextView{3d90d45 V.ED.... ... 799,7-1050,127 #7f0f017b app:id/tvdate1}
+                              android.widget.Button{dd3dc9a IFED..C. ... 311,24-380,108 #7f0f017c app:id/buttonnotify1}
+                            android.widget.TextView{98809cb V.ED..C. ... 0,135-1050,192 #7f0f017d app:id/tvdate2}
+                            android.widget.TextView{fea35a8 V.ED..C. ... 0,192-1050,249 #7f0f017e app:id/appointment}
+                            android.view.View{b0238c1 V.ED.... ... 0,255-1050,258 #7f0f017f app:id/view}
+                            android.widget.LinearLayout{3832866 V.E..... ... 0,258-1050,378 #7f0f0180 app:id/layout1}
+                              android.widget.TextView{a0b77a7 V.ED.... ... 24,0-616,120 #7f0f0169 app:id/tvowner1}
+                              android.widget.ImageView{7810454 I.ED.... ... 616,15-677,90 #7f0f0181 app:id/buttonimg}
+                            android.widget.LinearLayout{e389ffd V.E..... ... 0,378-1050,498 #7f0f0182 app:id/layout2}
+                              android.widget.TextView{98964f2 V.ED.... ... 24,0-477,120 #7f0f016a app:id/tvtenant1}
+                              android.widget.ImageView{16de743 I.ED.... ... 477,15-549,90 #7f0f0183 app:id/buttonimg1}
+                            android.widget.LinearLayout{91411c0 V.E...C. ... 0,498-1050,618 #7f0f0184 app:id/contactperson}
+                              android.widget.TextView{5743ef9 V.ED.... ... 24,0-268,120 #7f0f0185 app:id/contact1}
+                              android.widget.ImageView{b44de3e V.ED.... ... 268,15-410,90 #7f0f0186 app:id/buttonimg2}
+                            android.widget.LinearLayout{9fdb49f V.E..... ... 0,633-368,694 #7f0f0187 app:id/biometricStatus}
+                              android.widget.TextView{889ec V.ED.... ... 24,0-368,61 #7f0f0188 app:id/bio1}
+                            android.widget.LinearLayout{630d1b5 V.E..... ... 0,709-24,770 #7f0f0189 app:id/biometricStatus1}
+                              android.widget.TextView{9aca04a V.ED.... ... 24,0-24,61 #7f0f018a app:id/bio2}
+                            android.widget.LinearLayout{a92fbbb V.E..... ... 0,785-1050,905}
+                              android.widget.LinearLayout{6ea58d8 V.E..... ... 0,0-210,120}
+                                android.widget.TextView{7e9d431 V.ED..C. ... 33,0-177,120 #7f0f018b app:id/tvstatus1}
+                              android.widget.LinearLayout{c1c7716 V.E..... ... 210,0-420,120}
+                                android.widget.TextView{56b9897 V.ED..C. ... 33,0-177,120 #7f0f016b app:id/tvcomment1}
+                              android.widget.LinearLayout{3182a84 V.E..... ... 420,0-630,120}
+                                android.widget.TextView{456826d V.ED..C. ... 33,0-177,120 #7f0f016d app:id/tvAddpay1}
+                              android.widget.LinearLayout{1e0eea2 V.E..... ... 630,0-840,120}
+                                android.widget.TextView{8c72733 V.ED..C. ... 33,0-177,120 #7f0f016e app:id/tvACVR1}
+                              android.widget.LinearLayout{f2f6af0 V.E..... ... 840,0-1050,120}
+                                android.widget.TextView{f65d869 V.ED..C. ... 105,0-105,120 #7f0f0170 app:id/tvMap1}
+                          android.widget.LinearLayout{8352ee V.E..... ... 0,1160-1050,2065}
+                            android.widget.RelativeLayout{d43038f V.E..... ... 0,0-1050,135 #7f0f0178 app:id/relative}
+                              android.widget.TextView{38461c V.ED..C. ... 24,0-287,120 #7f0f0179 app:id/tvreportKey}
+                              android.widget.Button{2fa9225 VFED..C. ... 618,0-738,135 #7f0f017a app:id/owner2}
+                              android.widget.TextView{ad5affa V.ED.... ... 799,7-1050,127 #7f0f017b app:id/tvdate1}
+                              android.widget.Button{df649ab IFED..C. ... 311,24-380,108 #7f0f017c app:id/buttonnotify1}
+                            android.widget.TextView{191a808 V.ED..C. ... 0,135-1050,192 #7f0f017d app:id/tvdate2}
+                            android.widget.TextView{a672ba1 V.ED..C. ... 0,192-1050,249 #7f0f017e app:id/appointment}
+                            android.view.View{cbed1c6 V.ED.... ... 0,255-1050,258 #7f0f017f app:id/view}
+                            android.widget.LinearLayout{64dd587 V.E..... ... 0,258-1050,378 #7f0f0180 app:id/layout1}
+                              android.widget.TextView{39d3cb4 V.ED.... ... 24,0-797,120 #7f0f0169 app:id/tvowner1}
+                              android.widget.ImageView{9a9e0dd I.ED.... ... 797,15-855,90 #7f0f0181 app:id/buttonimg}
+                            android.widget.LinearLayout{7c64452 V.E..... ... 0,378-1050,498 #7f0f0182 app:id/layout2}
+                              android.widget.TextView{1a84323 V.ED.... ... 24,0-601,120 #7f0f016a app:id/tvtenant1}
+                              android.widget.ImageView{92b7020 I.ED.... ... 601,15-665,90 #7f0f0183 app:id/buttonimg1}
+                            android.widget.LinearLayout{c68add9 V.E...C. ... 0,498-1050,618 #7f0f0184 app:id/contactperson}
+                              android.widget.TextView{c60539e V.ED.... ... 24,0-202,120 #7f0f0185 app:id/contact1}
+                              android.widget.ImageView{8b1ee7f V.ED.... ... 202,15-357,90 #7f0f0186 app:id/buttonimg2}
+                            android.widget.LinearLayout{fa76e4c V.E..... ... 0,633-368,694 #7f0f0187 app:id/biometricStatus}
+                              android.widget.TextView{8ad4e95 V.ED.... ... 24,0-368,61 #7f0f0188 app:id/bio1}
+                            android.widget.LinearLayout{bfa0baa V.E..... ... 0,709-24,770 #7f0f0189 app:id/biometricStatus1}
+                              android.widget.TextView{880f39b V.ED.... ... 24,0-24,61 #7f0f018a app:id/bio2}
+                            android.widget.LinearLayout{e032338 V.E..... ... 0,785-1050,905}
+                              android.widget.LinearLayout{1613f11 V.E..... ... 0,0-210,120}
+                                android.widget.TextView{fc53876 V.ED..C. ... 33,0-177,120 #7f0f018b app:id/tvstatus1}
+                              android.widget.LinearLayout{f712e77 V.E..... ... 210,0-420,120}
+                                android.widget.TextView{6633ae4 V.ED..C. ... 33,0-177,120 #7f0f016b app:id/tvcomment1}
+                              android.widget.LinearLayout{489bb4d V.E..... ... 420,0-630,120}
+                                android.widget.TextView{446602 V.ED..C. ... 33,0-177,120 #7f0f016d app:id/tvAddpay1}
+                              android.widget.LinearLayout{bc03b13 V.E..... ... 630,0-840,120}
+                                android.widget.TextView{68b2150 V.ED..C. ... 33,0-177,120 #7f0f016e app:id/tvACVR1}
+                              android.widget.LinearLayout{143bf49 V.E..... ... 840,0-1050,120}
+                                android.widget.TextView{996e04e V.ED..C. ... 105,0-105,120 #7f0f0170 app:id/tvMap1}
+                    android.support.design.widget.TabLayout{7e9756f VFED.... ... 0,1560-1080,1704 #7f0f0116 app:id/tabs}
+                      android.support.design.widget.TabLayout$SlidingTabStrip{309027c V.ED.... ... 0,0-1188,144}
+                        android.support.design.widget.TabLayout$TabView{1800705 VFE...C. .S. 0,0-297,144}
+                          android.support.v7.widget.AppCompatImageView{884b35a G.ED.... .S. 0,0-0,0}
+                          android.support.v7.widget.AppCompatTextView{c1f98b G.ED.... .S. 0,0-0,0}
+                          android.widget.RelativeLayout{921ca68 V.E..... .S. 36,0-261,144}
+                            android.support.v7.widget.AppCompatTextView{37f0e81 V.ED.... .S. 0,0-225,144 #7f0f0164 app:id/tab_title}
+                        android.support.design.widget.TabLayout$TabView{c4aab26 VFE...C. ... 297,0-594,144}
+                          android.support.v7.widget.AppCompatImageView{154a367 G.ED.... ... 0,0-0,0}
+                          android.support.v7.widget.AppCompatTextView{37d2514 G.ED.... ... 0,0-0,0}
+                          android.widget.RelativeLayout{f0d11bd V.E..... ... 36,0-261,144}
+                            android.support.v7.widget.AppCompatTextView{92653b2 V.ED.... ... 0,0-225,144 #7f0f0164 app:id/tab_title}
+                        android.support.design.widget.TabLayout$TabView{7e0f03 VFE...C. ... 594,0-891,144}
+                          android.support.v7.widget.AppCompatImageView{d917e80 G.ED.... ... 0,0-0,0}
+                          android.support.v7.widget.AppCompatTextView{27e0cb9 G.ED.... ... 0,0-0,0}
+                          android.widget.RelativeLayout{7a1f8fe V.E..... ... 36,0-261,144}
+                            android.support.v7.widget.AppCompatTextView{c48985f V.ED.... ... 0,0-225,144 #7f0f0164 app:id/tab_title}
+                        android.support.design.widget.TabLayout$TabView{1d002ac VFE...C. ... 891,0-1188,144}
+                          android.support.v7.widget.AppCompatImageView{369bb75 G.ED.... ... 0,0-0,0}
+                          android.support.v7.widget.AppCompatTextView{ca0a70a G.ED.... ... 0,0-0,0}
+                          android.widget.RelativeLayout{f085b7b V.E..... ... 36,0-261,144}
+                            android.support.v7.widget.AppCompatTextView{e909d98 V.ED.... ... 0,0-225,144 #7f0f0164 app:id/tab_title}
+        android.view.View{f2799f1 V.ED.... ... 0,1776-1080,1920 #1020030 android:id/navigationBarBackground}
+        android.view.View{62a29d6 V.ED.... ... 0,0-1080,72 #102002f android:id/statusBarBackground}

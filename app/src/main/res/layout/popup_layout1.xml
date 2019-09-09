@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="350dp"
+    android:background="@drawable/linearlayoutborder1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="START-TIME:"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/buttontime1"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView7"
+        android:layout_weight="0.20"
+        android:background="@drawable/clock_1"
+        android:gravity="left|center" />
+
+    <TextView
+        android:id="@+id/editTime1"
+        android:layout_marginLeft="5dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/buttontime1"
+        android:layout_alignBottom="@+id/buttontime1"
+        android:layout_toEndOf="@+id/buttontime1"
+        android:layout_toRightOf="@+id/buttontime1"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/checkBoxinterval"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttontime1"
+        android:text="Select The Interval Time:"
+        android:textColor="#000000" />
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/checkBoxinterval"
+    android:orientation="horizontal"
+    android:id="@+id/radioGroup2">
+
+    <RadioButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewtimes"
+        android:layout_alignStart="@+id/textViewtimes"
+        android:layout_below="@+id/checkBoxinterval"
+        android:layout_margin="3dp"
+        android:onClick="radio1"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_toStartOf="@+id/button2"
+        android:background="@drawable/btnselector1"
+        android:text="1/2 hour"
+        android:textColor="#000000" />
+
+    <RadioButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textViewtimes"
+        android:onClick="radio1"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3"
+        android:background="@drawable/btnselector1"
+        android:text="1 hour"
+        android:textColor="#000000" />
+
+    <RadioButton
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="radio1"
+        android:layout_alignEnd="@+id/radioGroup2"
+        android:layout_alignRight="@+id/radioGroup2"
+        android:layout_alignTop="@+id/checkBoxinterval"
+        android:background="@drawable/btnselector1"
+        android:text="2 hours"
+        android:textColor="#000000" />
+</RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewtimes"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+          android:layout_marginLeft="4dp"
+
+        android:layout_below="@+id/radioGroup2"
+        android:text="NO.OF.REPEAT:"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewtimes"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup3">
+
+        <RadioButton
+            android:id="@+id/buttonr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewtimes"
+            android:layout_alignStart="@+id/textViewtimes"
+            android:layout_below="@+id/checkBoxinterval"
+            android:layout_margin="3dp"
+
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_toStartOf="@+id/button2"
+            android:background="@drawable/btnselector1"
+            android:text="1"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/buttonr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewtimes"
+
+            android:layout_toLeftOf="@+id/button3"
+            android:layout_toStartOf="@+id/button3"
+            android:background="@drawable/btnselector1"
+            android:text="2"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/buttonr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/radioGroup2"
+            android:layout_alignRight="@+id/radioGroup2"
+            android:layout_alignTop="@+id/checkBoxinterval"
+            android:background="@drawable/btnselector1"
+            android:text="3"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/buttonr4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewtimes"
+            android:layout_toLeftOf="@+id/button3"
+            android:layout_toStartOf="@+id/button3"
+            android:background="@drawable/btnselector1"
+            android:text="4"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/buttonr5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/radioGroup2"
+            android:layout_alignRight="@+id/radioGroup2"
+            android:layout_alignTop="@+id/checkBoxinterval"
+            android:background="@drawable/btnselector1"
+            android:text="5"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_alignBaseline="@+id/text8"
+        android:layout_alignBottom="@+id/text8"
+        android:layout_toEndOf="@+id/editTime1"
+        android:layout_toRightOf="@+id/editTime1"
+        android:layout_weight="0.20"
+        android:background="#d6d9dc"
+        android:layout_marginRight="10dp"
+        android:text="CANCEL"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxinterval"
+        android:layout_alignStart="@+id/checkBoxinterval"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="22dp"
+        android:layout_weight="0.20"
+        android:background="#d6d9dc"
+        android:text="OK"
+        android:textColor="#000000" />
+</RelativeLayout>

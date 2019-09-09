@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:orientation="vertical"
+    android:weightSum="6.3">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffa500"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+
+    <TextView
+        android:id="@+id/reportkey_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="fhhhhhhh"
+        android:textColor="#000080"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/btnAppfor"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+
+            android:background="@android:color/transparent"
+            android:gravity="center|left"
+            android:text="Appointment for:"
+            android:textColor="#3f3f3f"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            style="@style/spinner_style"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+
+            android:gravity="center|left"
+            android:prompt="@string/Appointment_prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etaptadd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittextborder"
+            android:hint="Appointment Address"
+            android:maxLines="6"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textColor="#545454"
+            android:textColorHint="#545454" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/tvdistance"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:gravity="center|left"
+            android:text="Distance:"
+            android:textColor="#3f3f3f"
+            android:textSize="20sp" />
+
+
+        <EditText
+            android:id="@+id/etdistance"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+
+            android:background="@drawable/edittextborder"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:textColor="#545454">
+
+            <requestFocus />
+        </EditText>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/tvTransport"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:background="@android:color/transparent"
+            android:gravity="center|left"
+            android:text="Transport:"
+            android:textColor="#3f3f3f"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            style="@style/spinner_style"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+
+
+            android:prompt="@string/Transport_prompt" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvamount"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:gravity="center|left"
+            android:text="Amount:"
+            android:textColor="#3f3f3f"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etamount"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+
+            android:background="@drawable/edittextborder"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:textColor="#545454">
+
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnselector"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+        <!--android:background="@android:color/holo_blue_light"-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

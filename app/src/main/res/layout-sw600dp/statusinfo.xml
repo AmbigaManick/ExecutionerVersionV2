@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffa500"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvreqno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:textColor="#000080"
+
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvownerbio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:paddingLeft="20dp"
+                android:text="Owner biometrics completed: "
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerO"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+
+                android:prompt="@string/spinner_title" />
+
+            <TextView
+                android:id="@+id/tvtenantbio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:paddingLeft="20dp"
+                android:text="Tenant biometrics completed: "
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerT"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+
+                android:prompt="@string/spinner_title" />
+
+            <TextView
+                android:id="@+id/tvwitness1bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:paddingLeft="20dp"
+                android:text="Witness 2 biometrics completed: "
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerw1"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:prompt="@string/spinner_title" />
+
+            <TextView
+                android:id="@+id/tvwitness2bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:paddingLeft="20dp"
+                android:text="Witness 2 biometrics completed: "
+                android:textColor="#545454"
+
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerw2"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:prompt="@string/spinner_title" />
+
+            <Button
+                android:id="@+id/btnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btnselector"
+                android:text="Update Status"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

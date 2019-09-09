@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3b5998"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="SELECT PARTY_TYPE:"
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+
+                android:prompt="@string/spinner_title" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="SELECT PARTY_NAME:"
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+
+                android:prompt="@string/spinner_title" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="SELECT BIOMETRIC STATUS:"
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:prompt="@string/spinner_title" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Single menu item
+         Set id, icon and Title for each menu item
+    -->
+
+    <item
+        android:id="@+id/action_refresh1"
+        android:icon="@drawable/ic_refresh"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/login_id"
+        android:icon="@drawable/connect"
+        android:title=""
+
+        />
+
+    <!--<item-->
+    <!--android:id="@+id/weekend"-->
+    <!--android:icon="@drawable/connect"-->
+    <!--android:title="Weekend/WeekOff"-->
+
+    <!--/>-->
+
+    <item
+        android:id="@+id/abt"
+        android:icon="@drawable/connect"
+        android:title="About"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/log_out"
+        android:icon="@drawable/connect"
+        android:title="Log Out"
+        app:showAsAction="never" />
+
+
+</menu>
+
+
+

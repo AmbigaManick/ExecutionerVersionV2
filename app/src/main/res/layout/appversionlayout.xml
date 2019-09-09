@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="400dp"
+    android:background="@drawable/linearlayoutborder1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bSearch"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/bSearch"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Your app is not Updated!!!Please Update here"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bSearch1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/btnselector"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:padding="16dp"
+        android:text="Update" />
+
+
+    <Button
+        android:id="@+id/bSearch1"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView7"
+        android:layout_marginEnd="31dp"
+        android:textColor="#ffffff"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/btnselector"
+        android:drawableLeft="@drawable/visibility"
+        android:padding="16dp"
+        android:text=" Cancel" />
+
+</RelativeLayout>
+
+
+

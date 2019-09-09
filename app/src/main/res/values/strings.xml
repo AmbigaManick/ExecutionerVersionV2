@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Anulom</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="Cancel">Cancel</string>
+    <string name="spinner_title">Select Category</string>
+    <string name="title">Owner</string>
+    <string name="title1">Tenant</string>
+    <string name="title2">Witness</string>
+    <string name="title3">POA</string>
+    <string name="Transport_prompt">Choose Transport..</string>
+    <string name="Appointment_prompt">Appointment for..</string>
+    <string name="About">About</string>
+    <string-array name="Transportation">
+        <item>Bus</item>
+        <item>Train</item>
+        <item>2 wheeler</item>
+        <item>Combination</item>
+    </string-array>
+
+    <string-array name="Appointment_for">
+        <item/>
+        <item>Owner</item>
+        <item>Tenant</item>
+        <item>Both</item>
+        <item>Witness</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>
+
+
+
+
+
+

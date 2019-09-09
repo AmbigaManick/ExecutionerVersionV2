@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+          >
+        <ListView
+          android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5.0sp"
+            android:id="@+id/tasklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            />
+        </LinearLayout>
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/l1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvdetails"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+
+            <!--android:gravity="center"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Request_No"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvDate"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvdetails"-->
+
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="35dp"-->
+            <!--android:text="Date / Time"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvstatus"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvDate"-->
+
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="60dp"-->
+            <!--android:text="Status"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvSyncStatus"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvstatus"-->
+
+            <!--android:gravity="center"-->
+            <!--android:text="Status_Sync"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#000000"-->
+            <!--android:layout_marginLeft="50dp"-->
+            <!--android:textSize="15dip" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvowner"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="60dp"-->
+            <!--android:layout_toRightOf="@id/tvSyncStatus"-->
+
+            <!--android:gravity="center"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Owner"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvtenant"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="85dp"-->
+            <!--android:layout_toRightOf="@id/tvowner"-->
+
+            <!--android:gravity="center"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Tenant"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvComment"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="65dp"-->
+            <!--android:layout_toRightOf="@id/tvtenant"-->
+
+            <!--android:gravity="center"-->
+            <!--android:text="Comment"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvCommentSync"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_toRightOf="@id/tvComment"-->
+
+            <!--android:gravity="center"-->
+            <!--android:text="Com_Sync"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvAddPayment"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvCommentSync"-->
+
+            <!--android:gravity="center"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Add_Payment"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvACVR"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvAddPayment"-->
+
+            <!--android:gravity="center"-->
+            <!--android:text="Acvr"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_marginLeft="45dp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvACVRStatus"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvACVR"-->
+
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="44dp"-->
+            <!--android:text="Acvr_Sync"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="15dip" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvMap"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_toRightOf="@id/tvACVRStatus"-->
+
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="60dp"-->
+
+            <!--android:text="Map"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="15dip" />-->
+
+
+    <!--</RelativeLayout>-->

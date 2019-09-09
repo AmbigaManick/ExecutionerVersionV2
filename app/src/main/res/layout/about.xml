@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3b5998"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_black" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:clickable="true"
+        android:text="V-19.7.5"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt10"
+        android:layout_alignRight="@+id/txt10"
+        android:layout_below="@+id/txt1"
+        android:text="Layout Design"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imgLogo"
+        android:layout_alignRight="@+id/imgLogo"
+        android:layout_below="@+id/version"
+        android:text="Biometric-Check in/View Only"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt2"
+        android:layout_centerHorizontal="true"
+        android:text="Notification"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt3"
+        android:layout_centerHorizontal="true"
+        android:text="Map"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt15"
+        android:layout_alignRight="@+id/txt15"
+        android:layout_below="@+id/txt6"
+        android:layout_marginTop="13dp"
+        android:text="ACVR Updation"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt11"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Internal Witness"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt10"
+        android:layout_alignStart="@+id/txt10"
+        android:layout_below="@+id/txt10"
+        android:layout_marginTop="24dp"
+        android:text="Check Version"
+        android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:textSize="15sp" />
+</RelativeLayout>

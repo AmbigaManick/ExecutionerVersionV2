@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="400dp"
+    android:background="@drawable/linearlayoutborder1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/bSearch1"
+        android:layout_toStartOf="@+id/bSearch1"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:ignore="UnknownIdInLayout" />
+
+
+
+
+
+
+</RelativeLayout>
+
+
+

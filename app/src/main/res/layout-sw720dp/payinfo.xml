@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffa500"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+    <RelativeLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp">
+
+
+        <TextView
+            android:id="@+id/tvreqno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="30dp"
+
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/tvpay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvreqno"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/tvpay2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvpay1"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvpay3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvpay2"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/expayments"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvpay3"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:text=" Reason for additional payments  "
+            android:textColor="#000080"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expayments"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/ss"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Stampduty shortfall"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/ev"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Extra Visit"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/pp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Partial Payment"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/btnupdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroup5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btnselector"
+            android:text="Update"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20sp"
+
+            />
+    </RelativeLayout>
+</LinearLayout>
+

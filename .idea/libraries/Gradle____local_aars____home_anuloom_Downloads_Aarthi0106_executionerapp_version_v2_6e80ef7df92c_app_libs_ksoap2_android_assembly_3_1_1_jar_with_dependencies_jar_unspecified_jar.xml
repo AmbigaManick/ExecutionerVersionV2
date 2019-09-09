@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:/home/anuloom/Downloads/Aarthi0106-executionerapp-version-v2-6e80ef7df92c/app/libs/ksoap2-android-assembly-3.1.1-jar-with-dependencies.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/ksoap2-android-assembly-3.1.1-jar-with-dependencies.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

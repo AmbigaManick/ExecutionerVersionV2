@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ls1"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="#d2b98c"
+            android:paddingLeft="12dp"
+
+            android:text="Request_No"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvdetails"
+            android:background="#d2b98c"
+            android:paddingLeft="32dp"
+            android:text="Date / Time"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvDate"
+            android:background="#d2b98c"
+            android:paddingLeft="55dp"
+            android:text="Status"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvSyncStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvstatus"
+            android:background="#d2b98c"
+            android:paddingLeft="55dp"
+            android:text="Status_Sync"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvowner"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvSyncStatus"
+            android:background="#d2b98c"
+            android:paddingLeft="65dp"
+            android:text="Owner"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvtenant"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvowner"
+            android:background="#d2b98c"
+            android:paddingLeft="65dp"
+            android:text="Tenant"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvtenant"
+            android:background="#d2b98c"
+            android:paddingLeft="70dp"
+            android:text="Comment"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvCommentSync"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvComment"
+            android:background="#d2b98c"
+            android:paddingLeft="45dp"
+            android:text="Com_Sync"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvAddPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvCommentSync"
+            android:background="#d2b98c"
+            android:paddingLeft="35dp"
+            android:text="Add_Payment"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvACVR"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvAddPayment"
+            android:background="#d2b98c"
+            android:paddingLeft="50dp"
+            android:text="Acvr"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvACVRStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvACVR"
+            android:background="#d2b98c"
+            android:paddingLeft="50dp"
+            android:text="Acvr_Sync"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvMap"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tvACVRStatus"
+            android:background="#d2b98c"
+            android:paddingLeft="79dp"
+            android:paddingRight="40dp"
+            android:text="Map"
+            android:textColor="#545454"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+            <ListView
+                android:id="@+id/tasklist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</HorizontalScrollView>

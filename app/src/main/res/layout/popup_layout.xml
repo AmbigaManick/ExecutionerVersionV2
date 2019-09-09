@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#d6d9dc"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="ACTUAL REACHING-TIME"
+        android:textColor="#000000" />
+
+
+    <Button
+        android:id="@+id/buttontime1"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true"
+
+        android:background="@drawable/clock_1"
+        android:gravity="left|center" />
+
+    <TextView
+        android:id="@+id/editTime1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/buttontime1"
+        android:layout_centerHorizontal="true"
+
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textColor="#000000" />
+
+
+    <Button
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTime1"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/editTime1"
+        android:layout_toRightOf="@+id/editTime1"
+        android:layout_weight="0.20"
+
+        android:background="#d6d9dc"
+        android:text="CANCEL"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text7"
+        android:layout_alignBottom="@+id/text7"
+        android:layout_toLeftOf="@+id/text7"
+        android:layout_toStartOf="@+id/text7"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="0.20"
+        android:background="#d6d9dc"
+        android:text="OK"
+        android:textColor="#000000" />
+</RelativeLayout>

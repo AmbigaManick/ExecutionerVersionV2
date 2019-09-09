@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/texts"
+    style="@style/spinner_style1"
+    android:layout_width="365dp"
+    android:layout_height="45dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/toolbar"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="58dp"
+    android:drawable="@drawable/droparrowicon"
+    android:gravity="center"
+    android:prompt="@string/spinner_title"
+    android:textAlignment="gravity"
+
+
+    android:textSize="16sp" />
+

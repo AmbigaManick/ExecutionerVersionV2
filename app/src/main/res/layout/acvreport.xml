@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:orientation="vertical"
+        android:weightSum="6.3">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#3b5998"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/cardview_light_background" />
+
+        <TextView
+            android:id="@+id/reportkey_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:textColor="#000080"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+
+                <RadioButton
+                    android:id="@+id/previousaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="95dp"
+                    android:text="PREVIOUS ADDRESS"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/dotted" />
+
+                <RadioButton
+                    android:id="@+id/otherlocation"
+                    android:layout_width="163dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="95dp"
+                    android:text="OTHER LOCATION"
+                    android:textStyle="bold" />
+
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+
+            android:visibility="gone"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:id="@+id/radio"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/card_view">
+
+                <LinearLayout
+                    android:id="@+id/linear7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentTop="true"
+
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/start1"
+                        android:layout_width="242dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Choose a starting point..."
+                        android:singleLine="true" />
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/end1"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Choose a destination..."
+                        android:singleLine="true" />
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:layout_marginRight="50dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@drawable/dotted" />-->
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/send"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/ic_send_grey600_48dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/btnAppfor"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                android:text="Appointment for:"
+                android:textColor="#3f3f3f"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_weight="0.5"
+                android:prompt="@string/Appointment_prompt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etaptadd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittextborder"
+                android:hint="Appointment Address"
+                android:maxLines="6"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="#545454"
+                android:textColorHint="#545454" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/tvdistance"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+
+                android:gravity="center|left"
+                android:text="Distance:"
+                android:textColor="#3f3f3f"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/etdistance"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+
+                android:background="@drawable/edittextborder"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:textColor="#545454">
+
+                <requestFocus />
+            </EditText>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/tvTransport"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                android:text="Transport:"
+                android:textColor="#3f3f3f"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                style="@style/spinner_style"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+
+
+                android:prompt="@string/Transport_prompt" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvamount"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+
+                android:gravity="center|left"
+                android:text="Amount:"
+                android:textColor="#3f3f3f"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etamount"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+
+                android:background="@drawable/edittextborder"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:textColor="#545454">
+
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/btnselector"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+            <!--android:background="@android:color/holo_blue_light"-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

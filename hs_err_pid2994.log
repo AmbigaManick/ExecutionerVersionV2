@@ -1,0 +1,996 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fdd9249d5c4, pid=2994, tid=0x00007fdd535fd700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b01) (build 1.8.0_152-release-915-b01)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# J 6999 C1 org.gradle.api.internal.changedetection.state.AbstractNormalizedFileSnapshot.appendToHasher(Lorg/gradle/caching/internal/BuildCacheHasher;)V (28 bytes) @ 0x00007fdd9249d5c4 [0x00007fdd9249cc40+0x984]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fdd800d5000):  JavaThread "build operations Thread 2" [_thread_in_Java, id=4483, stack(0x00007fdd534fd000,0x00007fdd535fe000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00000000b7369910
+
+Registers:
+RAX=0x00000000b7369910, RBX=0x00000001004ab810, RCX=0x00000001004ab810, RDX=0x00000000ef896850
+RSP=0x00007fdd535fb860, RBP=0x00007fdd535fbbb8, RSI=0x00007fdd53c3dc78, RDI=0x00000000ef896978
+R8 =0x0000000000000006, R9 =0x00000000000000b1, R10=0x00000001004ab810, R11=0x0000000000000220
+R12=0x0000000000000000, R13=0x000000002f697064, R14=0x000000005f6e6f63, R15=0x00007fdd800d5000
+RIP=0x00007fdd9249d5c4, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fdd535fb860)
+0x00007fdd535fb860:   00007fdd535fbbb8 00007fdd918ff4dc
+0x00007fdd535fb870:   00007fdd51e09778 0000000100000b08
+0x00007fdd535fb880:   0000000000000000 00007fdd535fbb68
+0x00007fdd535fb890:   0000000000000000 00000000ef8969e8
+0x00007fdd535fb8a0:   00007fdd535fb8f0 00007fdd911b8d66
+0x00007fdd535fb8b0:   00007fdd535fbbb8 00007fdd924b6e14
+0x00007fdd535fb8c0:   00007fdd535fb900 00007fdda74e0ace
+0x00007fdd535fb8d0:   00007fdd51e09778 00007fdd800d5000
+0x00007fdd535fb8e0:   00000001007741a8 00007fdd800d5000
+0x00007fdd535fb8f0:   00007fdd535fbbb8 00000000ef896a00
+0x00007fdd535fb900:   0000016000000000 00000000ef896850
+0x00007fdd535fb910:   00000000ef892e60 00000000ef896978
+0x00007fdd535fb920:   00000000c1c11888 00000000ef896978
+0x00007fdd535fb930:   00000000ef896958 00000000ef896978
+0x00007fdd535fb940:   00000000f717fa88 00000000ef896958
+0x00007fdd535fb950:   000000010046fd00 00000000ef7ec648
+0x00007fdd535fb960:   0000000000000000 00000000ef897320
+0x00007fdd535fb970:   00000001007741a8 00007fdd925b2b96
+0x00007fdd535fb980:   00007fdd535fbbb8 00007fdd925b2cf4
+0x00007fdd535fb990:   ef8965f0bbf1e01a 00007fdd800d51e0
+0x00007fdd535fb9a0:   0000000000000004 00000000ef8965f0
+0x00007fdd535fb9b0:   00007fdd535fb9e0 0000000000000004
+0x00007fdd535fb9c0:   00007fdd80086c40 0000000291e6c934
+0x00007fdd535fb9d0:   00000000ef7ec7f8 00007fdd91007ffd
+0x00007fdd535fb9e0:   00007fdda7f22050 00000000ef896850
+0x00007fdd535fb9f0:   00000000ef8969e8 00000000ef897320
+0x00007fdd535fba00:   00000000ef896760 0000000000000004
+0x00007fdd535fba10:   00007fdd535fbbb8 00007fdd91b8ef9c
+0x00007fdd535fba20:   00007fdd00000000 0000000000000000
+0x00007fdd535fba30:   00000000ef7ebdc0 0000000100000b08
+0x00007fdd535fba40:   0000000000000000 0000000000000000
+0x00007fdd535fba50:   00000000ef8966a0 00007fdd800d5000 
+
+Instructions: (pc=0x00007fdd9249d5c4)
+0x00007fdd9249d5a4:   dc 00 00 00 48 be 78 dc c3 53 dd 7f 00 00 81 e7
+0x00007fdd9249d5b4:   f8 ff 7f 00 83 ff 00 0f 84 47 07 00 00 8b 7a 0c
+0x00007fdd9249d5c4:   48 3b 00 48 8b f0 48 bb 38 26 e3 51 dd 7f 00 00
+0x00007fdd9249d5d4:   48 83 83 18 01 00 00 01 48 be 18 28 e3 51 dd 7f 
+
+Register to memory mapping:
+
+RAX=0x00000000b7369910 is an unknown value
+RBX=0x00000001004ab810 is pointing into metadata
+RCX=0x00000001004ab810 is pointing into metadata
+RDX=0x00000000ef896850 is an oop
+org.gradle.caching.internal.DefaultBuildCacheHasher 
+ - klass: 'org/gradle/caching/internal/DefaultBuildCacheHasher'
+RSP=0x00007fdd535fb860 is pointing into the stack for thread: 0x00007fdd800d5000
+RBP=0x00007fdd535fbbb8 is pointing into the stack for thread: 0x00007fdd800d5000
+RSI={method} {0x00007fdd53c3dc78} 'putHash' '(Lorg/gradle/internal/hash/HashCode;)Lorg/gradle/caching/internal/BuildCacheHasher;' in 'org/gradle/caching/internal/DefaultBuildCacheHasher'
+RDI=0x00000000ef896978 is an oop
+org.gradle.internal.hash.Hashing$MessageDigestHasher 
+ - klass: 'org/gradle/internal/hash/Hashing$MessageDigestHasher'
+R8 =0x0000000000000006 is an unknown value
+R9 =0x00000000000000b1 is an unknown value
+R10=0x00000001004ab810 is pointing into metadata
+R11=0x0000000000000220 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x000000002f697064 is an unknown value
+R14=0x000000005f6e6f63 is an unknown value
+R15=0x00007fdd800d5000 is a thread
+
+
+Stack: [0x00007fdd534fd000,0x00007fdd535fe000],  sp=0x00007fdd535fb860,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+J 6999 C1 org.gradle.api.internal.changedetection.state.AbstractNormalizedFileSnapshot.appendToHasher(Lorg/gradle/caching/internal/BuildCacheHasher;)V (28 bytes) @ 0x00007fdd9249d5c4 [0x00007fdd9249cc40+0x984]
+J 9425 C1 org.gradle.api.internal.changedetection.state.OrderInsensitiveTaskFilePropertyCompareStrategy.appendToHasher(Lorg/gradle/caching/internal/BuildCacheHasher;Ljava/util/Collection;)V (51 bytes) @ 0x00007fdd925b2cf4 [0x00007fdd925b2600+0x6f4]
+J 9417 C1 org.gradle.api.internal.changedetection.state.DefaultFileCollectionSnapshot.getHash()Lorg/gradle/internal/hash/HashCode; (45 bytes) @ 0x00007fdd91b8ef9c [0x00007fdd91b8ec80+0x31c]
+j  org.gradle.api.internal.changedetection.state.DefaultFileCollectionSnapshot.appendToHasher(Lorg/gradle/caching/internal/BuildCacheHasher;)V+2
+J 7274 C1 org.gradle.api.internal.changedetection.state.DefaultFileSystemSnapshotter$2.create()Lorg/gradle/api/internal/changedetection/state/Snapshot; (117 bytes) @ 0x00007fdd92529de4 [0x00007fdd92528600+0x17e4]
+J 7273 C1 org.gradle.api.internal.changedetection.state.DefaultFileSystemSnapshotter$2.create()Ljava/lang/Object; (5 bytes) @ 0x00007fdd9252d7cc [0x00007fdd9252d740+0x8c]
+J 7214 C1 org.gradle.cache.internal.ProducerGuard$StripedProducerGuard.guardByKey(Ljava/lang/Object;Lorg/gradle/internal/Factory;)Ljava/lang/Object; (46 bytes) @ 0x00007fdd92504904 [0x00007fdd925045a0+0x364]
+J 7271 C1 org.gradle.api.internal.artifacts.transform.DefaultTransformedFileCache.getResult(Ljava/io/File;Lorg/gradle/internal/hash/HashCode;Lorg/gradle/internal/util/BiFunction;)Ljava/util/List; (69 bytes) @ 0x00007fdd92524b34 [0x00007fdd92524620+0x514]
+J 7270 C1 org.gradle.api.internal.artifacts.transform.DefaultVariantTransformRegistration.transform(Ljava/io/File;)Ljava/util/List; (43 bytes) @ 0x00007fdd9252385c [0x00007fdd925231a0+0x6bc]
+J 7269 C1 org.gradle.api.internal.artifacts.transform.DefaultVariantTransformRegistration.transform(Ljava/lang/Object;)Ljava/lang/Object; (9 bytes) @ 0x00007fdd92522dac [0x00007fdd92522c40+0x16c]
+J 7518 C1 org.gradle.api.internal.artifacts.transform.VariantAttributeMatchingCache$1.transform(Ljava/io/File;)Ljava/util/List; (81 bytes) @ 0x00007fdd925e2344 [0x00007fdd925e1c40+0x704]
+J 7517 C1 org.gradle.api.internal.artifacts.transform.VariantAttributeMatchingCache$1.transform(Ljava/lang/Object;)Ljava/lang/Object; (9 bytes) @ 0x00007fdd925e541c [0x00007fdd925e52c0+0x15c]
+J 7516 C1 org.gradle.api.internal.artifacts.transform.DefaultArtifactTransforms$TransformArtifactOperation.run(Lorg/gradle/internal/operations/BuildOperationContext;)V (35 bytes) @ 0x00007fdd925e4c8c [0x00007fdd925e4b20+0x16c]
+J 7365 C1 org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(Lorg/gradle/internal/operations/BuildOperation;Lorg/gradle/internal/operations/BuildOperationContext;)V (10 bytes) @ 0x00007fdd9257faf4 [0x00007fdd9257fa40+0xb4]
+J 7315 C1 org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(Lorg/gradle/internal/operations/BuildOperation;Lorg/gradle/internal/operations/BuildOperationWorker;Lorg/gradle/internal/progress/DefaultBuildOperationExecutor$DefaultBuildOperationState;)V (394 bytes) @ 0x00007fdd9255b65c [0x00007fdd92558e80+0x27dc]
+J 9546 C1 org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable$1.call()Ljava/lang/Integer; (38 bytes) @ 0x00007fdd929021d4 [0x00007fdd92902100+0xd4]
+J 9545 C1 org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable$1.call()Ljava/lang/Object; (5 bytes) @ 0x00007fdd92902f24 [0x00007fdd92902ec0+0x64]
+J 9541 C1 org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(Ljava/lang/Iterable;Ljava/util/concurrent/Callable;)Ljava/lang/Object; (58 bytes) @ 0x00007fdd9290114c [0x00007fdd92901020+0x12c]
+J 9564 C1 org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.runBatch(Lorg/gradle/internal/operations/BuildOperation;)V (50 bytes) @ 0x00007fdd9290c5c4 [0x00007fdd9290c2c0+0x304]
+J 7278 C1 org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.run()V (22 bytes) @ 0x00007fdd925306ec [0x00007fdd92530660+0x8c]
+J 7459 C1 org.gradle.internal.concurrent.ManagedExecutorImpl$1.run()V (57 bytes) @ 0x00007fdd925c457c [0x00007fdd925c4080+0x4fc]
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run()V+7
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x62c3aa]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xeea
+V  [libjvm.so+0x629a84]  JavaCalls::call_virtual(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x2a4
+V  [libjvm.so+0x62a07a]  JavaCalls::call_virtual(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Thread*)+0x4a
+V  [libjvm.so+0x66ad3e]  thread_entry(JavaThread*, Thread*)+0x8e
+V  [libjvm.so+0x996db8]  JavaThread::thread_main_inner()+0xd8
+V  [libjvm.so+0x84e792]  java_start(Thread*)+0xf2
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fdd80370800 JavaThread "Task worker for ':'" [_thread_blocked, id=4487, stack(0x00007fdd8c2b2000,0x00007fdd8c3b3000)]
+  0x00007fdd80370000 JavaThread "Cache worker for Build Output Cleanup Cache (/home/anulom/Pictures/ExecutionerApp/.gradle/buildOutputCleanup)" [_thread_blocked, id=4486, stack(0x00007fdd51f7a000,0x00007fdd5207b000)]
+  0x00007fdd8036e000 JavaThread "Cache worker for task history cache (/home/anulom/Pictures/ExecutionerApp/.gradle/4.4.1/taskHistory)" [_thread_blocked, id=4485, stack(0x00007fdd5217c000,0x00007fdd5227d000)]
+  0x00007fdd8036d000 JavaThread "Cache worker for file content cache (/home/anulom/Pictures/ExecutionerApp/.gradle/4.4.1/fileContent)" [_thread_blocked, id=4484, stack(0x00007fdd51c79000,0x00007fdd51d7a000)]
+=>0x00007fdd800d5000 JavaThread "build operations Thread 2" [_thread_in_Java, id=4483, stack(0x00007fdd534fd000,0x00007fdd535fe000)]
+  0x00007fdd80086000 JavaThread "build operations" [_thread_blocked, id=4482, stack(0x00007fdd5207b000,0x00007fdd5217c000)]
+  0x00007fdd800d4000 JavaThread "Cache worker for Artifact transforms cache (/home/anulom/.gradle/caches/transforms-1)" [_thread_blocked, id=4480, stack(0x00007fdd6405e000,0x00007fdd6415f000)]
+  0x00007fdd80082800 JavaThread "Cache worker for file hash cache (/home/anulom/Pictures/ExecutionerApp/.gradle/4.4.1/fileHashes)" [_thread_blocked, id=4477, stack(0x00007fdd535fe000,0x00007fdd536ff000)]
+  0x00007fdd80081000 JavaThread "Stdin handler" [_thread_blocked, id=4476, stack(0x00007fdd64efe000,0x00007fdd64fff000)]
+  0x00007fdd80080800 JavaThread "Asynchronous log dispatcher for DefaultDaemonConnection: socket connection from /127.0.0.1:33541 to /127.0.0.1:57786" [_thread_blocked, id=4475, stack(0x00007fdd8c5b3000,0x00007fdd8c6b4000)]
+  0x00007fdd5800f800 JavaThread "Daemon worker Thread 3" [_thread_blocked, id=4474, stack(0x00007fdd8c8b6000,0x00007fdd8c9b7000)]
+  0x00007fdd5800b000 JavaThread "Cancel handler" [_thread_blocked, id=4473, stack(0x00007fdd8c6b4000,0x00007fdd8c7b5000)]
+  0x00007fdd58007800 JavaThread "Handler for socket connection from /127.0.0.1:33541 to /127.0.0.1:57786" [_thread_in_native, id=4472, stack(0x00007fdd8c7b5000,0x00007fdd8c8b6000)]
+  0x00007fdd5c01b800 JavaThread "Daemon Thread 3" [_thread_blocked, id=4471, stack(0x00007fdd8c9b7000,0x00007fdd8cab8000)]
+  0x00007fdd4ccda000 JavaThread "pool-1-thread-1" [_thread_blocked, id=3165, stack(0x00007fdd52e92000,0x00007fdd52f93000)]
+  0x00007fdd4c8ee000 JavaThread "Memory manager" [_thread_blocked, id=3148, stack(0x00007fdd53cff000,0x00007fdd53e00000)]
+  0x00007fdd4c1ee800 JavaThread "File lock request listener" [_thread_in_native, id=3049, stack(0x00007fdd8c0b0000,0x00007fdd8c1b1000)]
+  0x00007fdd4c1e7000 JavaThread "Cache worker for file hash cache (/home/anulom/.gradle/caches/4.4.1/fileHashes)" [_thread_blocked, id=3048, stack(0x00007fdd8c1b1000,0x00007fdd8c2b2000)]
+  0x00007fdda0d82800 JavaThread "Daemon periodic checks" [_thread_blocked, id=3017, stack(0x00007fdd8cab8000,0x00007fdd8cbb9000)]
+  0x00007fdda0d5e800 JavaThread "Incoming local TCP Connector on port 33541" [_thread_in_native, id=3016, stack(0x00007fdd8cbc0000,0x00007fdd8ccc1000)]
+  0x00007fdda00ba000 JavaThread "Service Thread" daemon [_thread_blocked, id=3007, stack(0x00007fdd8e41f000,0x00007fdd8e520000)]
+  0x00007fdda00b7800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=3006, stack(0x00007fdd8e520000,0x00007fdd8e621000)]
+  0x00007fdda00b4800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=3005, stack(0x00007fdd8e621000,0x00007fdd8e722000)]
+  0x00007fdda00b3000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3004, stack(0x00007fdd8e722000,0x00007fdd8e823000)]
+  0x00007fdda0080800 JavaThread "Finalizer" daemon [_thread_blocked, id=3003, stack(0x00007fdd8eafb000,0x00007fdd8ebfc000)]
+  0x00007fdda007c000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3002, stack(0x00007fdd8ebfc000,0x00007fdd8ecfd000)]
+  0x00007fdda000b000 JavaThread "main" [_thread_blocked, id=2997, stack(0x00007fdda8aa5000,0x00007fdda8ba6000)]
+
+Other Threads:
+  0x00007fdda0074000 VMThread [stack: 0x00007fdd8ecfd000,0x00007fdd8edfe000] [id=3001]
+  0x00007fdda00bc800 WatcherThread [stack: 0x00007fdd8e31e000,0x00007fdd8e41f000] [id=3008]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 187904K, used 87911K [0x00000000eab00000, 0x00000000f7900000, 0x0000000100000000)
+  eden space 179200K, 44% used [0x00000000eab00000,0x00000000ef8d5d68,0x00000000f5a00000)
+  from space 8704K, 94% used [0x00000000f7080000,0x00000000f7884020,0x00000000f7900000)
+  to   space 14336K, 0% used [0x00000000f5d00000,0x00000000f5d00000,0x00000000f6b00000)
+ ParOldGen       total 124416K, used 42843K [0x00000000c0000000, 0x00000000c7980000, 0x00000000eab00000)
+  object space 124416K, 34% used [0x00000000c0000000,0x00000000c29d6c40,0x00000000c7980000)
+ Metaspace       used 60450K, capacity 63074K, committed 63232K, reserved 1103872K
+  class space    used 7931K, capacity 8623K, committed 8704K, reserved 1048576K
+
+Card table byte_map: [0x00007fdda5729000,0x00007fdda592a000] byte_map_base: 0x00007fdda5129000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fdda7f6d3e0
+ Begin Bits: [0x00007fdd8f000000, 0x00007fdd90000000)
+ End Bits:   [0x00007fdd90000000, 0x00007fdd91000000)
+
+Polling page: 0x00007fdda8bc1000
+
+CodeCache: size=245760Kb used=27612Kb max_used=27612Kb free=218147Kb
+ bounds [0x00007fdd91000000, 0x00007fdd92b20000, 0x00007fdda0000000]
+ total_blobs=9509 nmethods=8730 adapters=693
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 2005.481 Thread 0x00007fdda00b7800 10360       1       org.gradle.cache.internal.btree.BTreePersistentIndexedCache$IndexBlock::getType (3 bytes)
+Event: 2005.481 Thread 0x00007fdda00b7800 nmethod 10360 0x00007fdd92b0e050 code [0x00007fdd92b0e1a0, 0x00007fdd92b0e2b0]
+Event: 2005.485 Thread 0x00007fdda00b4800 nmethod 10355 0x00007fdd92b16c50 code [0x00007fdd92b16e60, 0x00007fdd92b17718]
+Event: 2005.485 Thread 0x00007fdda00b4800 10357       4       java.util.concurrent.ConcurrentLinkedQueue::offer (115 bytes)
+Event: 2005.488 Thread 0x00007fdda00b4800 nmethod 10357 0x00007fdd92b14dd0 code [0x00007fdd92b14f40, 0x00007fdd92b15178]
+Event: 2005.489 Thread 0x00007fdda00b4800 10352   !   4       org.gradle.internal.event.DefaultListenerManager$EventBroadcast$ListenerDispatch::dispatch (55 bytes)
+Event: 2005.495 Thread 0x00007fdda00b7800 10362       3       com.google.common.cache.LocalCache$Segment::recordRead (29 bytes)
+Event: 2005.496 Thread 0x00007fdda00b7800 nmethod 10362 0x00007fdd92afebd0 code [0x00007fdd92afed60, 0x00007fdd92aff1b8]
+Event: 2005.496 Thread 0x00007fdda00b7800 10363   !   3       com.google.common.cache.LocalCache$Segment::get (210 bytes)
+Event: 2005.498 Thread 0x00007fdda00b7800 nmethod 10363 0x00007fdd92b18190 code [0x00007fdd92b18660, 0x00007fdd92b1b4d8]
+
+GC Heap History (10 events):
+Event: 68.066 GC heap before
+{Heap before GC invocations=15 (full 2):
+ PSYoungGen      total 157184K, used 149337K [0x00000000eab00000, 0x00000000f5880000, 0x0000000100000000)
+  eden space 142848K, 100% used [0x00000000eab00000,0x00000000f3680000,0x00000000f3680000)
+  from space 14336K, 45% used [0x00000000f4400000,0x00000000f4a567c0,0x00000000f5200000)
+  to   space 13824K, 0% used [0x00000000f3680000,0x00000000f3680000,0x00000000f4400000)
+ ParOldGen       total 81920K, used 31739K [0x00000000c0000000, 0x00000000c5000000, 0x00000000eab00000)
+  object space 81920K, 38% used [0x00000000c0000000,0x00000000c1efec68,0x00000000c5000000)
+ Metaspace       used 54480K, capacity 56240K, committed 56576K, reserved 1097728K
+  class space    used 7367K, capacity 7817K, committed 7936K, reserved 1048576K
+Event: 68.109 GC heap after
+Heap after GC invocations=15 (full 2):
+ PSYoungGen      total 156672K, used 13208K [0x00000000eab00000, 0x00000000f8400000, 0x0000000100000000)
+  eden space 142848K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f3680000)
+  from space 13824K, 95% used [0x00000000f3680000,0x00000000f43662e0,0x00000000f4400000)
+  to   space 15360K, 0% used [0x00000000f7500000,0x00000000f7500000,0x00000000f8400000)
+ ParOldGen       total 81920K, used 32730K [0x00000000c0000000, 0x00000000c5000000, 0x00000000eab00000)
+  object space 81920K, 39% used [0x00000000c0000000,0x00000000c1ff6b70,0x00000000c5000000)
+ Metaspace       used 54480K, capacity 56240K, committed 56576K, reserved 1097728K
+  class space    used 7367K, capacity 7817K, committed 7936K, reserved 1048576K
+}
+Event: 69.448 GC heap before
+{Heap before GC invocations=16 (full 2):
+ PSYoungGen      total 156672K, used 79203K [0x00000000eab00000, 0x00000000f8400000, 0x0000000100000000)
+  eden space 142848K, 46% used [0x00000000eab00000,0x00000000eeb72988,0x00000000f3680000)
+  from space 13824K, 95% used [0x00000000f3680000,0x00000000f43662e0,0x00000000f4400000)
+  to   space 15360K, 0% used [0x00000000f7500000,0x00000000f7500000,0x00000000f8400000)
+ ParOldGen       total 81920K, used 32730K [0x00000000c0000000, 0x00000000c5000000, 0x00000000eab00000)
+  object space 81920K, 39% used [0x00000000c0000000,0x00000000c1ff6b70,0x00000000c5000000)
+ Metaspace       used 57019K, capacity 58960K, committed 59028K, reserved 1099776K
+  class space    used 7690K, capacity 8185K, committed 8192K, reserved 1048576K
+Event: 69.476 GC heap after
+Heap after GC invocations=16 (full 2):
+ PSYoungGen      total 207360K, used 6853K [0x00000000eab00000, 0x00000000f8b80000, 0x0000000100000000)
+  eden space 192000K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f6680000)
+  from space 15360K, 44% used [0x00000000f7500000,0x00000000f7bb1648,0x00000000f8400000)
+  to   space 14848K, 0% used [0x00000000f6680000,0x00000000f6680000,0x00000000f7500000)
+ ParOldGen       total 81920K, used 42354K [0x00000000c0000000, 0x00000000c5000000, 0x00000000eab00000)
+  object space 81920K, 51% used [0x00000000c0000000,0x00000000c295cb80,0x00000000c5000000)
+ Metaspace       used 57019K, capacity 58960K, committed 59028K, reserved 1099776K
+  class space    used 7690K, capacity 8185K, committed 8192K, reserved 1048576K
+}
+Event: 69.476 GC heap before
+{Heap before GC invocations=17 (full 3):
+ PSYoungGen      total 207360K, used 6853K [0x00000000eab00000, 0x00000000f8b80000, 0x0000000100000000)
+  eden space 192000K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f6680000)
+  from space 15360K, 44% used [0x00000000f7500000,0x00000000f7bb1648,0x00000000f8400000)
+  to   space 14848K, 0% used [0x00000000f6680000,0x00000000f6680000,0x00000000f7500000)
+ ParOldGen       total 81920K, used 42354K [0x00000000c0000000, 0x00000000c5000000, 0x00000000eab00000)
+  object space 81920K, 51% used [0x00000000c0000000,0x00000000c295cb80,0x00000000c5000000)
+ Metaspace       used 57019K, capacity 58960K, committed 59028K, reserved 1099776K
+  class space    used 7690K, capacity 8185K, committed 8192K, reserved 1048576K
+Event: 69.733 GC heap after
+Heap after GC invocations=17 (full 3):
+ PSYoungGen      total 207360K, used 0K [0x00000000eab00000, 0x00000000f8b80000, 0x0000000100000000)
+  eden space 192000K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f6680000)
+  from space 15360K, 0% used [0x00000000f7500000,0x00000000f7500000,0x00000000f8400000)
+  to   space 14848K, 0% used [0x00000000f6680000,0x00000000f6680000,0x00000000f7500000)
+ ParOldGen       total 124416K, used 41325K [0x00000000c0000000, 0x00000000c7980000, 0x00000000eab00000)
+  object space 124416K, 33% used [0x00000000c0000000,0x00000000c285b558,0x00000000c7980000)
+ Metaspace       used 57019K, capacity 58960K, committed 59028K, reserved 1099776K
+  class space    used 7690K, capacity 8185K, committed 8192K, reserved 1048576K
+}
+Event: 1506.445 GC heap before
+{Heap before GC invocations=18 (full 3):
+ PSYoungGen      total 207360K, used 192000K [0x00000000eab00000, 0x00000000f8b80000, 0x0000000100000000)
+  eden space 192000K, 100% used [0x00000000eab00000,0x00000000f6680000,0x00000000f6680000)
+  from space 15360K, 0% used [0x00000000f7500000,0x00000000f7500000,0x00000000f8400000)
+  to   space 14848K, 0% used [0x00000000f6680000,0x00000000f6680000,0x00000000f7500000)
+ ParOldGen       total 124416K, used 41325K [0x00000000c0000000, 0x00000000c7980000, 0x00000000eab00000)
+  object space 124416K, 33% used [0x00000000c0000000,0x00000000c285b558,0x00000000c7980000)
+ Metaspace       used 59731K, capacity 62244K, committed 62336K, reserved 1103872K
+  class space    used 7903K, capacity 8552K, committed 8576K, reserved 1048576K
+Event: 1506.491 GC heap after
+Heap after GC invocations=18 (full 3):
+ PSYoungGen      total 195584K, used 10153K [0x00000000eab00000, 0x00000000f7d00000, 0x0000000100000000)
+  eden space 185344K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f6000000)
+  from space 10240K, 99% used [0x00000000f6680000,0x00000000f706a5e0,0x00000000f7080000)
+  to   space 12800K, 0% used [0x00000000f7080000,0x00000000f7080000,0x00000000f7d00000)
+ ParOldGen       total 124416K, used 41333K [0x00000000c0000000, 0x00000000c7980000, 0x00000000eab00000)
+  object space 124416K, 33% used [0x00000000c0000000,0x00000000c285d558,0x00000000c7980000)
+ Metaspace       used 59731K, capacity 62244K, committed 62336K, reserved 1103872K
+  class space    used 7903K, capacity 8552K, committed 8576K, reserved 1048576K
+}
+Event: 2004.540 GC heap before
+{Heap before GC invocations=19 (full 3):
+ PSYoungGen      total 195584K, used 195467K [0x00000000eab00000, 0x00000000f7d00000, 0x0000000100000000)
+  eden space 185344K, 99% used [0x00000000eab00000,0x00000000f5ff8800,0x00000000f6000000)
+  from space 10240K, 99% used [0x00000000f6680000,0x00000000f706a5e0,0x00000000f7080000)
+  to   space 12800K, 0% used [0x00000000f7080000,0x00000000f7080000,0x00000000f7d00000)
+ ParOldGen       total 124416K, used 41333K [0x00000000c0000000, 0x00000000c7980000, 0x00000000eab00000)
+  object space 124416K, 33% used [0x00000000c0000000,0x00000000c285d558,0x00000000c7980000)
+ Metaspace       used 60250K, capacity 62896K, committed 63232K, reserved 1103872K
+  class space    used 7927K, capacity 8616K, committed 8704K, reserved 1048576K
+Event: 2004.564 GC heap after
+Heap after GC invocations=19 (full 3):
+ PSYoungGen      total 187904K, used 8208K [0x00000000eab00000, 0x00000000f7900000, 0x0000000100000000)
+  eden space 179200K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f5a00000)
+  from space 8704K, 94% used [0x00000000f7080000,0x00000000f7884020,0x00000000f7900000)
+  to   space 14336K, 0% used [0x00000000f5d00000,0x00000000f5d00000,0x00000000f6b00000)
+ ParOldGen       total 124416K, used 42843K [0x00000000c0000000, 0x00000000c7980000, 0x00000000eab00000)
+  object space 124416K, 34% used [0x00000000c0000000,0x00000000c29d6c40,0x00000000c7980000)
+ Metaspace       used 60250K, capacity 62896K, committed 63232K, reserved 1103872K
+  class space    used 7927K, capacity 8616K, committed 8704K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 1508.057 Thread 0x00007fdd58011000 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007fdd91bb17b4 method=java.lang.ThreadLocal$ThreadLocalMap.getEntryAfterMiss(Ljava/lang/ThreadLocal;ILjava/lang/ThreadLocal$ThreadLocalMap$Entry;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry; 
+Event: 2003.889 Thread 0x00007fdd5800f800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fdd91c2560c method=org.gradle.internal.hash.HashCode.equals(Ljava/lang/Object;)Z @ 2
+Event: 2004.431 Thread 0x00007fdd5800f800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fdd92911b18 method=com.google.common.cache.LocalCache$Segment.expand()V @ 80
+Event: 2004.938 Thread 0x00007fdd5800f800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fdd92911b18 method=com.google.common.cache.LocalCache$Segment.expand()V @ 80
+Event: 2005.019 Thread 0x00007fdd5800f800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007fdd92456814 method=java.util.AbstractCollection.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 119
+Event: 2005.020 Thread 0x00007fdd5800f800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007fdd92456814 method=java.util.AbstractCollection.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 119
+Event: 2005.020 Thread 0x00007fdd5800f800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007fdd92456814 method=java.util.AbstractCollection.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 119
+Event: 2005.024 Thread 0x00007fdd5800f800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007fdd92456814 method=java.util.AbstractCollection.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 119
+Event: 2005.491 Thread 0x00007fdd800d5000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fdd926483c8 method=com.google.common.cache.LocalCache$Segment.getEntry(Ljava/lang/Object;I)Lcom/google/common/cache/LocalCache$ReferenceEntry; @ 56
+Event: 2005.491 Thread 0x00007fdd800d5000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fdd92759c10 method=com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(Ljava/lang/Object;ILcom/google/common/cache/CacheLoader;)Ljava/lang/Object; @ 94
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f581ce10) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f5820ac0) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f5821fe8) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f5828718) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f5829bc0) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f582cc20) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f582e060) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f5832468) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2004.483 Thread 0x00007fdd5800f800 Exception <a 'sun/nio/fs/UnixException'> (0x00000000f58338b8) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 2005.004 Thread 0x00007fdd4c8ee000 Exception <a 'java/io/IOException'> (0x00000000ee1f12b8) thrown at [/ssd/Android/AOSP-openjdk-git/jdk8u/hotspot/src/share/vm/prims/jni.cpp, line 709]
+
+Events (10 events):
+Event: 2005.295 Thread 0x00007fdd5800f800 DEOPT PACKING pc=0x00007fdd91c8cda6 sp=0x00007fdd8c9b0040
+Event: 2005.295 Thread 0x00007fdd5800f800 DEOPT UNPACKING pc=0x00007fdd91046f73 sp=0x00007fdd8c9afe70 mode 0
+Event: 2005.366 Executing VM operation: RevokeBias
+Event: 2005.366 Executing VM operation: RevokeBias done
+Event: 2005.491 Thread 0x00007fdd800d5000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00007fdd926483c8
+Event: 2005.491 Thread 0x00007fdd800d5000 DEOPT PACKING pc=0x00007fdd926483c8 sp=0x00007fdd535fb2e0
+Event: 2005.491 Thread 0x00007fdd800d5000 DEOPT UNPACKING pc=0x00007fdd91004f69 sp=0x00007fdd535fb228 mode 2
+Event: 2005.491 Thread 0x00007fdd800d5000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00007fdd92759c10
+Event: 2005.491 Thread 0x00007fdd800d5000 DEOPT PACKING pc=0x00007fdd92759c10 sp=0x00007fdd535fb1e0
+Event: 2005.491 Thread 0x00007fdd800d5000 DEOPT UNPACKING pc=0x00007fdd91004f69 sp=0x00007fdd535fb1a0 mode 2
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 13631623                           /home/anulom/.local/share/umake/android/android-studio/jre/bin/java
+00600000-00601000 r--p 00000000 08:01 13631623                           /home/anulom/.local/share/umake/android/android-studio/jre/bin/java
+00601000-00602000 rw-p 00001000 08:01 13631623                           /home/anulom/.local/share/umake/android/android-studio/jre/bin/java
+0078a000-007ab000 rw-p 00000000 00:00 0                                  [heap]
+c0000000-c7980000 rw-p 00000000 00:00 0 
+c7980000-eab00000 ---p 00000000 00:00 0 
+eab00000-f7900000 rw-p 00000000 00:00 0 
+f7900000-100000000 ---p 00000000 00:00 0 
+100000000-100880000 rw-p 00000000 00:00 0 
+100880000-140000000 ---p 00000000 00:00 0 
+7fdd4c000000-7fdd4d5c1000 rw-p 00000000 00:00 0 
+7fdd4d5c1000-7fdd50000000 ---p 00000000 00:00 0 
+7fdd5165a000-7fdd5179a000 rw-p 00000000 00:00 0 
+7fdd5179a000-7fdd5185a000 ---p 00000000 00:00 0 
+7fdd5185a000-7fdd51a5a000 rw-p 00000000 00:00 0 
+7fdd51a5a000-7fdd51a79000 r--s 0053d000 08:01 16649428                   /home/anulom/.gradle/caches/jars-3/68f26ab7fb35c4f3d6147f492d421812/sdk-tools.jar
+7fdd51a79000-7fdd51c79000 rw-p 00000000 00:00 0 
+7fdd51c79000-7fdd51c7c000 ---p 00000000 00:00 0 
+7fdd51c7c000-7fdd51f7a000 rw-p 00000000 00:00 0 
+7fdd51f7a000-7fdd51f7d000 ---p 00000000 00:00 0 
+7fdd51f7d000-7fdd5207b000 rw-p 00000000 00:00 0 
+7fdd5207b000-7fdd5207e000 ---p 00000000 00:00 0 
+7fdd5207e000-7fdd5217c000 rw-p 00000000 00:00 0 
+7fdd5217c000-7fdd5217f000 ---p 00000000 00:00 0 
+7fdd5217f000-7fdd5247d000 rw-p 00000000 00:00 0 
+7fdd5247d000-7fdd5267d000 rw-p 00000000 00:00 0 
+7fdd5267d000-7fdd5287d000 rw-p 00000000 00:00 0 
+7fdd5287d000-7fdd5288f000 r--s 00345000 08:01 13631646                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/resources.jar
+7fdd5288f000-7fdd52a8f000 rw-p 00000000 00:00 0 
+7fdd52a8f000-7fdd52c8f000 rw-p 00000000 00:00 0 
+7fdd52c8f000-7fdd52c92000 r--s 00015000 08:01 13631746                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/jce.jar
+7fdd52c92000-7fdd52e92000 rw-p 00000000 00:00 0 
+7fdd52e92000-7fdd52e95000 ---p 00000000 00:00 0 
+7fdd52e95000-7fdd53193000 rw-p 00000000 00:00 0 
+7fdd53193000-7fdd5319e000 r--s 00081000 08:01 17703120                   /home/anulom/.gradle/caches/jars-3/2fdf665fbc793b995ec1aa5bd3f1c61e/trove4j-20160824.jar
+7fdd5319e000-7fdd53221000 r--s 00758000 08:01 17703118                   /home/anulom/.gradle/caches/jars-3/367f362894b985620b81cdea0275dc25/intellij-core-26.0.1.jar
+7fdd53221000-7fdd53227000 r--s 00033000 08:01 17703116                   /home/anulom/.gradle/caches/jars-3/6d14fda7961c06a1d3f65b914902aaca/commons-codec-1.6.jar
+7fdd53227000-7fdd53229000 r--s 0000d000 08:01 17703114                   /home/anulom/.gradle/caches/jars-3/b958e1f87f076c583b5ee3dbc28a0bda/commons-logging-1.1.1.jar
+7fdd53229000-7fdd5322f000 r--s 00032000 08:01 17703112                   /home/anulom/.gradle/caches/jars-3/81dc9d67dc6677389b34cb21689a42ad/httpcore-4.2.5.jar
+7fdd5322f000-7fdd53230000 r--s 00004000 08:01 17703110                   /home/anulom/.gradle/caches/jars-3/212ba5c11546ef79a308fcadac8844ce/annotations-12.0.jar
+7fdd53230000-7fdd53231000 r--s 00000000 08:01 17703108                   /home/anulom/.gradle/caches/jars-3/da76d16a7380e837619b3393622b331c/animal-sniffer-annotations-1.14.jar
+7fdd53231000-7fdd53233000 r--s 00001000 08:01 17703106                   /home/anulom/.gradle/caches/jars-3/e9abfccb43bd544f77a0d92ec9afadd7/j2objc-annotations-1.1.jar
+7fdd53233000-7fdd53234000 r--s 00002000 08:01 17703104                   /home/anulom/.gradle/caches/jars-3/b8797c82c20181ba870036c2868f473d/error_prone_annotations-2.0.18.jar
+7fdd53234000-7fdd53237000 r--s 00006000 08:01 17703102                   /home/anulom/.gradle/caches/jars-3/258dd0c3148622e9c507fcb6c0649341/jsr305-1.3.9.jar
+7fdd53237000-7fdd53238000 r--s 0000a000 08:01 17703100                   /home/anulom/.gradle/caches/jars-3/4352e397eb3e8adfc2bd942162e1dc9c/kxml2-2.3.0.jar
+7fdd53238000-7fdd5323a000 r--s 00005000 08:01 17703098                   /home/anulom/.gradle/caches/jars-3/5a14ce4d8ba906c5d0043250e8894139/httpmime-4.1.jar
+7fdd5323a000-7fdd53244000 r--s 00061000 08:01 17703096                   /home/anulom/.gradle/caches/jars-3/d42bf4fcccc63f349c6810abfcd8877a/httpclient-4.2.6.jar
+7fdd53244000-7fdd5324d000 r--s 00064000 08:01 17703094                   /home/anulom/.gradle/caches/jars-3/6d1a19fc7bf82a43f3c9fa5a512a45ec/commons-compress-1.12.jar
+7fdd5324d000-7fdd53252000 r--s 0002e000 08:01 17703092                   /home/anulom/.gradle/caches/jars-3/54bd9f2c9aacc506ff6cbfb91308680e/gson-2.3.jar
+7fdd53252000-7fdd53262000 r--s 000d6000 08:01 17703090                   /home/anulom/.gradle/caches/jars-3/3e3040dc2daab2a7347504eb413f0df5/proguard-base-5.3.3.jar
+7fdd53262000-7fdd53264000 r--s 00003000 08:01 17571010                   /home/anulom/.gradle/caches/jars-3/461985c1f4e307944bd7490eedc627b4/annotations-13.0.jar
+7fdd53264000-7fdd53265000 r--s 00001000 08:01 17571008                   /home/anulom/.gradle/caches/jars-3/8af8ffac1dad04f8f37718b273bcc66a/annotations-26.0.1.jar
+7fdd53265000-7fdd53268000 r--s 00033000 08:01 17571006                   /home/anulom/.gradle/caches/jars-3/891a605f5da1268301fcb1a7ef45692d/juniversalchardet-1.0.3.jar
+7fdd53268000-7fdd5326c000 r--s 0002a000 08:01 17571004                   /home/anulom/.gradle/caches/jars-3/cd2efe6fe5cb7c2f6f78581f68a8a39b/commons-io-2.4.jar
+7fdd5326c000-7fdd53283000 r--s 00154000 08:01 17571002                   /home/anulom/.gradle/caches/jars-3/a65edfa7b9842d93dc7c423619bf678f/antlr4-4.5.3.jar
+7fdd53283000-7fdd53284000 r--s 00003000 08:01 17571000                   /home/anulom/.gradle/caches/jars-3/e19d6a55138675ee89b434bb2cb4b9c1/baseLibrary-3.0.1.jar
+7fdd53284000-7fdd532b4000 r--s 00245000 08:01 17570998                   /home/anulom/.gradle/caches/jars-3/3c96b3800bef5a9d130642a5fce696b5/guava-22.0.jar
+7fdd532b4000-7fdd532bc000 r--s 000a8000 08:01 17570996                   /home/anulom/.gradle/caches/jars-3/ccaa7be1bcfaaae3e3572d91dde1bd8e/lombok-ast-0.2.3.jar
+7fdd532bc000-7fdd532c0000 r--s 0002f000 08:01 17570994                   /home/anulom/.gradle/caches/jars-3/de8d73ecf39301704b1c7f034cd2130b/jimfs-1.1.jar
+7fdd532c0000-7fdd532d3000 r--s 00241000 08:01 17570992                   /home/anulom/.gradle/caches/jars-3/4b48ac71e1d8214740ba4d1810348f40/ecj-4.6.1.jar
+7fdd532d3000-7fdd532d4000 r--s 00003000 08:01 17570990                   /home/anulom/.gradle/caches/jars-3/886874542f908119a3606ae736c6e667/json-simple-1.1.jar
+7fdd532d4000-7fdd533f9000 r--s 00f5d000 08:01 17570988                   /home/anulom/.gradle/caches/jars-3/a007888cf940169896c734d0e8fa7bf1/fastutil-7.2.0.jar
+7fdd533f9000-7fdd53444000 r--s 002ff000 08:01 17570986                   /home/anulom/.gradle/caches/jars-3/e0daa3dd76e278d343c26d2295b4574d/bcprov-jdk15on-1.56.jar
+7fdd53444000-7fdd53455000 r--s 00097000 08:01 17570984                   /home/anulom/.gradle/caches/jars-3/a13765522a6a2719251f3c45666b012b/bcpkix-jdk15on-1.56.jar
+7fdd53455000-7fdd53457000 r--s 00002000 08:01 17570982                   /home/anulom/.gradle/caches/jars-3/c758fa8868209f4d03b01225e1ed2001/javawriter-2.5.0.jar
+7fdd53457000-7fdd5345c000 r--s 0003b000 08:01 17570980                   /home/anulom/.gradle/caches/jars-3/05f05a993a765572b156b5e6e27cfca6/apksig-3.0.1.jar
+7fdd5345c000-7fdd5345f000 r--s 00024000 08:01 17570978                   /home/anulom/.gradle/caches/jars-3/3f310810d038e2c3a4c3f8aed1006b7c/common-26.0.1.jar
+7fdd5345f000-7fdd53461000 r--s 00006000 08:01 17440149                   /home/anulom/.gradle/caches/jars-3/8b887508080d58a8a7a937748c62312f/dvlib-26.0.1.jar
+7fdd53461000-7fdd53464000 r--s 00014000 08:01 17440147                   /home/anulom/.gradle/caches/jars-3/de93659978da7bad7bf37b9211f6615c/layoutlib-api-26.0.1.jar
+7fdd53464000-7fdd53469000 r--s 0004d000 08:01 17440145                   /home/anulom/.gradle/caches/jars-3/91cfa2a1bec56e3e8584f4f38f251732/ddmlib-26.0.1.jar
+7fdd53469000-7fdd5346a000 r--s 00003000 08:01 17440143                   /home/anulom/.gradle/caches/jars-3/74f46a71cbc0daafe52fd9ca69f86088/builder-test-api-3.0.1.jar
+7fdd5346a000-7fdd5346d000 r--s 00007000 08:01 17440141                   /home/anulom/.gradle/caches/jars-3/3ce94ec18e773c9e1432f0c89c2bbc67/builder-model-3.0.1.jar
+7fdd5346d000-7fdd5347c000 r--s 00130000 08:01 17440139                   /home/anulom/.gradle/caches/jars-3/fe162220f4ea1f4503f6542c24ae17ff/protobuf-java-3.0.0.jar
+7fdd5347c000-7fdd5348f000 r--s 001a8000 08:01 17440137                   /home/anulom/.gradle/caches/jars-3/cdc03ae28f60a08250fb893b1c0c1c3c/protos-26.0.1.jar
+7fdd5348f000-7fdd53491000 r--s 00004000 08:01 17440133                   /home/anulom/.gradle/caches/jars-3/c3b9ad2921cb4003eeaddbb23f1bfb23/tracker-26.0.1.jar
+7fdd53491000-7fdd53493000 r--s 00002000 08:01 17440131                   /home/anulom/.gradle/caches/jars-3/aef91c30517375c16ce5441e84be0f5e/proguard-gradle-5.3.3.jar
+7fdd53493000-7fdd53495000 r--s 0000f000 08:01 17440103                   /home/anulom/.gradle/caches/jars-3/c93e74da8ceb3a75ff5456599f439b40/jopt-simple-4.9.jar
+7fdd53495000-7fdd53499000 r--s 0001e000 08:01 17440101                   /home/anulom/.gradle/caches/jars-3/ca06f182421af2dc08b18e644cc5b319/org.jacoco.core-0.7.4.201502262128.jar
+7fdd53499000-7fdd5349c000 r--s 00020000 08:01 17440099                   /home/anulom/.gradle/caches/jars-3/6a74a1be83056603e80b6cb9e0149ecc/org.jacoco.report-0.7.4.201502262128.jar
+7fdd5349c000-7fdd5349e000 r--s 0000c000 08:01 17440097                   /home/anulom/.gradle/caches/jars-3/0ede7333fe09a80fbc4fe1a0c9b586cd/asm-5.1.jar
+7fdd5349e000-7fdd534a0000 r--s 00006000 08:01 17440095                   /home/anulom/.gradle/caches/jars-3/bc49c094a2443fb7fadba7269dffb02a/asm-tree-5.1.jar
+7fdd534a0000-7fdd534a2000 r--s 0000a000 08:01 17306987                   /home/anulom/.gradle/caches/jars-3/08cdd41fe1f26baeb39b42fea9560740/asm-commons-5.1.jar
+7fdd534a2000-7fdd534b1000 r--s 000c8000 08:01 17306979                   /home/anulom/.gradle/caches/jars-3/7e07cae13c87090be1369bab18d11b2f/kotlin-stdlib-1.1.3-2.jar
+7fdd534b1000-7fdd534e3000 r--s 0021b000 08:01 17306977                   /home/anulom/.gradle/caches/jars-3/6dbd960d887237239ec3700113b781ef/kotlin-reflect-1.1.3-2.jar
+7fdd534e3000-7fdd534ee000 r--s 0009b000 08:01 17306973                   /home/anulom/.gradle/caches/jars-3/9f07ffbf4dbdecd6e41e9ee00501122c/sdklib-26.0.1.jar
+7fdd534ee000-7fdd534fd000 r--s 000da000 08:01 17306970                   /home/anulom/.gradle/caches/jars-3/f391b93f631315d2bdf9d377b80e5b91/sdk-common-26.0.1.jar
+7fdd534fd000-7fdd53500000 ---p 00000000 00:00 0 
+7fdd53500000-7fdd535fe000 rw-p 00000000 00:00 0 
+7fdd535fe000-7fdd53601000 ---p 00000000 00:00 0 
+7fdd53601000-7fdd538ff000 rw-p 00000000 00:00 0 
+7fdd538ff000-7fdd53aff000 rw-p 00000000 00:00 0 
+7fdd53aff000-7fdd53cff000 rw-p 00000000 00:00 0 
+7fdd53cff000-7fdd53d02000 ---p 00000000 00:00 0 
+7fdd53d02000-7fdd54000000 rw-p 00000000 00:00 0 
+7fdd54000000-7fdd5429c000 rw-p 00000000 00:00 0 
+7fdd5429c000-7fdd58000000 ---p 00000000 00:00 0 
+7fdd58000000-7fdd5828b000 rw-p 00000000 00:00 0 
+7fdd5828b000-7fdd5c000000 ---p 00000000 00:00 0 
+7fdd5c000000-7fdd5c078000 rw-p 00000000 00:00 0 
+7fdd5c078000-7fdd60000000 ---p 00000000 00:00 0 
+7fdd60000000-7fdd60021000 rw-p 00000000 00:00 0 
+7fdd60021000-7fdd64000000 ---p 00000000 00:00 0 
+7fdd64000000-7fdd64001000 r--s 00005000 08:01 17440135                   /home/anulom/.gradle/caches/jars-3/9a42f5d0dd49033b57521cc6c85be9f6/shared-26.0.1.jar
+7fdd64001000-7fdd64007000 r--s 00030000 08:01 17306975                   /home/anulom/.gradle/caches/jars-3/5c35e0a9d78e5d47cd8822b1bf46921d/repository-26.0.1.jar
+7fdd64007000-7fdd6400b000 r--s 00023000 08:01 17306968                   /home/anulom/.gradle/caches/jars-3/15dc424ff5261869cedb4c0e5a20e245/manifest-merger-26.0.1.jar
+7fdd6400b000-7fdd6400f000 r--s 0002e000 08:01 17306965                   /home/anulom/.gradle/caches/jars-3/5a815f3f93ee3ea5fddb0b336108fdb3/compilerCommon-3.0.1.jar
+7fdd6400f000-7fdd6401e000 r--s 000cb000 08:01 17306961                   /home/anulom/.gradle/caches/jars-3/316e5431a2b687ac56c7f6dbcc1c9494/uast-26.0.1.jar
+7fdd6401e000-7fdd64025000 r--s 0007f000 08:01 17306959                   /home/anulom/.gradle/caches/jars-3/340d79f490a37a2e826af11e3f4356ec/lint-api-26.0.1.jar
+7fdd64025000-7fdd6402e000 r--s 000ff000 08:01 17306957                   /home/anulom/.gradle/caches/jars-3/071188ed2a50fef0d4b8e73b6b538d10/lint-checks-26.0.1.jar
+7fdd6402e000-7fdd6405e000 r--s 01983000 08:01 17179180                   /home/anulom/.gradle/caches/jars-3/a8f9cc8f57e57275dd7e0e4f887563b1/builder-3.0.1.jar
+7fdd6405e000-7fdd64061000 ---p 00000000 00:00 0 
+7fdd64061000-7fdd6435f000 rw-p 00000000 00:00 0 
+7fdd6435f000-7fdd6455f000 rw-p 00000000 00:00 0 
+7fdd6455f000-7fdd6475f000 rw-p 00000000 00:00 0 
+7fdd6475f000-7fdd6495f000 rw-p 00000000 00:00 0 
+7fdd6495f000-7fdd64b5f000 rw-p 00000000 00:00 0 
+7fdd64b5f000-7fdd64d5f000 rw-p 00000000 00:00 0 
+7fdd64d5f000-7fdd64d60000 r--s 0000a000 08:01 17306989                   /home/anulom/.gradle/caches/jars-3/01be4c5f22346cb9b30cf8da870a55d5/asm-util-5.1.jar
+7fdd64d60000-7fdd64d61000 r--s 00004000 08:01 17306985                   /home/anulom/.gradle/caches/jars-3/0c311c56cf8ab286a5dc313445596433/asm-analysis-5.1.jar
+7fdd64d61000-7fdd64d62000 r--s 00000000 08:01 17306982                   /home/anulom/.gradle/caches/jars-3/985172a195bdfbab4cdfffc88b22ac93/transform-api-2.0.0-deprecated-use-gradle-api.jar
+7fdd64d62000-7fdd64d64000 r--s 00003000 08:01 17306963                   /home/anulom/.gradle/caches/jars-3/a639f12d6f35274aeb5b84917d018543/gradle-api-3.0.1.jar
+7fdd64d64000-7fdd64d67000 r--s 00039000 08:01 17179184                   /home/anulom/.gradle/caches/jars-3/d25ae0a93cc8161073ed411ccf2f15f2/lint-26.0.1.jar
+7fdd64d67000-7fdd64d8a000 r--s 0020b000 08:01 17179042                   /home/anulom/.gradle/caches/jars-3/fe69a7a42fede0fe8676722d0d7cf970/gradle-core-3.0.1.jar
+7fdd64d8a000-7fdd64d8c000 r--s 0000f000 08:01 17179038                   /home/anulom/.gradle/caches/jars-3/5c3c987e568a7e2d3123b7ee57cbfba4/gradle-3.0.1.jar
+7fdd64d8c000-7fdd64ea7000 r--s 02008000 08:01 17703170                   /home/anulom/.gradle/caches/jars-3/8398de3513ab42bc2e67d3f155317196/android.jar
+7fdd64ea7000-7fdd64eae000 r--s 0002a000 08:01 16521863                   /home/anulom/.gradle/caches/jars-3/b9065d5c108c6764f8c4bf7a97aafd34/gradle-messaging-3.5.jar
+7fdd64eae000-7fdd64eb3000 r--s 00041000 08:01 16521859                   /home/anulom/.gradle/caches/jars-3/aee7855bdca982f949ec3186b02c526c/commons-lang-2.6.jar
+7fdd64eb3000-7fdd64ef5000 r--s 00220000 08:01 16521855                   /home/anulom/.gradle/caches/jars-3/1f866921c0a6e4760018ae666598024e/gradle-core-3.5.jar
+7fdd64ef5000-7fdd64efe000 r--s 00047000 08:01 16521851                   /home/anulom/.gradle/caches/jars-3/98a1decbb29335fcb1426207b62600cc/gradle-base-services-3.5.jar
+7fdd64efe000-7fdd64f01000 ---p 00000000 00:00 0 
+7fdd64f01000-7fdd68000000 rw-p 00000000 00:00 0 
+7fdd68000000-7fdd68ce5000 rw-p 00000000 00:00 0 
+7fdd68ce5000-7fdd6c000000 ---p 00000000 00:00 0 
+7fdd6c000000-7fdd6c03c000 rw-p 00000000 00:00 0 
+7fdd6c03c000-7fdd70000000 ---p 00000000 00:00 0 
+7fdd70000000-7fdd70082000 rw-p 00000000 00:00 0 
+7fdd70082000-7fdd74000000 ---p 00000000 00:00 0 
+7fdd74000000-7fdd76851000 rw-p 00000000 00:00 0 
+7fdd76851000-7fdd78000000 ---p 00000000 00:00 0 
+7fdd78000000-7fdd7804c000 rw-p 00000000 00:00 0 
+7fdd7804c000-7fdd7c000000 ---p 00000000 00:00 0 
+7fdd7c000000-7fdd7c03e000 rw-p 00000000 00:00 0 
+7fdd7c03e000-7fdd80000000 ---p 00000000 00:00 0 
+7fdd80000000-7fdd8037c000 rw-p 00000000 00:00 0 
+7fdd8037c000-7fdd84000000 ---p 00000000 00:00 0 
+7fdd84000000-7fdd840ca000 rw-p 00000000 00:00 0 
+7fdd840ca000-7fdd88000000 ---p 00000000 00:00 0 
+7fdd88000000-7fdd88039000 rw-p 00000000 00:00 0 
+7fdd88039000-7fdd8c000000 ---p 00000000 00:00 0 
+7fdd8c000000-7fdd8c001000 r--s 00006000 08:01 14164984                   /home/anulom/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/3.0.0/ee538ce9cf4148485e43017c5542202b8c78ff8e/google-services-3.0.0.jar
+7fdd8c001000-7fdd8c029000 r--s 001cf000 08:01 16521847                   /home/anulom/.gradle/caches/jars-3/ca08947540925f2914d21c73bec56045/guava-jdk5-17.0.jar
+7fdd8c029000-7fdd8c037000 r--s 00043000 08:01 16521843                   /home/anulom/.gradle/caches/jars-3/7adfd9455544746876bc579b8921bc0e/gradle-tooling-api-3.5.jar
+7fdd8c037000-7fdd8c0b0000 r--s 010fd000 08:01 13631588                   /home/anulom/.local/share/umake/android/android-studio/jre/lib/tools.jar
+7fdd8c0b0000-7fdd8c0b3000 ---p 00000000 00:00 0 
+7fdd8c0b3000-7fdd8c1b1000 rw-p 00000000 00:00 0 
+7fdd8c1b1000-7fdd8c1b4000 ---p 00000000 00:00 0 
+7fdd8c1b4000-7fdd8c2b2000 rw-p 00000000 00:00 0 
+7fdd8c2b2000-7fdd8c2b5000 ---p 00000000 00:00 0 
+7fdd8c2b5000-7fdd8c5b3000 rw-p 00000000 00:00 0 
+7fdd8c5b3000-7fdd8c5b6000 ---p 00000000 00:00 0 
+7fdd8c5b6000-7fdd8c6b4000 rw-p 00000000 00:00 0 
+7fdd8c6b4000-7fdd8c6b7000 ---p 00000000 00:00 0 
+7fdd8c6b7000-7fdd8c7b5000 rw-p 00000000 00:00 0 
+7fdd8c7b5000-7fdd8c7b8000 ---p 00000000 00:00 0 
+7fdd8c7b8000-7fdd8c8b6000 rw-p 00000000 00:00 0 
+7fdd8c8b6000-7fdd8c8b9000 ---p 00000000 00:00 0 
+7fdd8c8b9000-7fdd8c9b7000 rw-p 00000000 00:00 0 
+7fdd8c9b7000-7fdd8c9ba000 ---p 00000000 00:00 0 
+7fdd8c9ba000-7fdd8cab8000 rw-p 00000000 00:00 0 
+7fdd8cab8000-7fdd8cabb000 ---p 00000000 00:00 0 
+7fdd8cabb000-7fdd8cbb9000 rw-p 00000000 00:00 0 
+7fdd8cbb9000-7fdd8cbc0000 r--s 00000000 08:01 15474297                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fdd8cbc0000-7fdd8cbc3000 ---p 00000000 00:00 0 
+7fdd8cbc3000-7fdd8ccc1000 rw-p 00000000 00:00 0 
+7fdd8ccc1000-7fdd8ccc6000 r--s 0009a000 08:01 13631698                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/jsse.jar
+7fdd8ccc6000-7fdd8cec6000 rw-p 00000000 00:00 0 
+7fdd8cec6000-7fdd8cecf000 r-xp 00000000 08:01 13631724                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libmanagement.so
+7fdd8cecf000-7fdd8d0ce000 ---p 00009000 08:01 13631724                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libmanagement.so
+7fdd8d0ce000-7fdd8d0cf000 r--p 00008000 08:01 13631724                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libmanagement.so
+7fdd8d0cf000-7fdd8d0d0000 rw-p 00009000 08:01 13631724                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libmanagement.so
+7fdd8d0d0000-7fdd8d0d2000 r--s 00007000 08:01 27146681                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-tooling-api-builders-4.4.1.jar
+7fdd8d0d2000-7fdd8d0d6000 r--s 00014000 08:01 27146655                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-testing-native-4.4.1.jar
+7fdd8d0d6000-7fdd8d0d8000 r--s 00009000 08:01 27146859                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/hamcrest-core-1.3.jar
+7fdd8d0d8000-7fdd8d0dd000 r--s 0005a000 08:01 27146780                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/bsh-2.0b6.jar
+7fdd8d0dd000-7fdd8d0df000 r--s 00006000 08:01 27146849                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jcommander-1.12.jar
+7fdd8d0df000-7fdd8d0e5000 r--s 00033000 08:01 27146854                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/snakeyaml-1.6.jar
+7fdd8d0e5000-7fdd8d0ee000 r--s 00089000 08:01 27146776                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/testng-6.3.1.jar
+7fdd8d0ee000-7fdd8d0f6000 r--s 00045000 08:01 27146777                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/junit-4.12.jar
+7fdd8d0f6000-7fdd8d0fa000 r--s 00019000 08:01 27146692                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-testing-jvm-4.4.1.jar
+7fdd8d0fa000-7fdd8d102000 r--s 00030000 08:01 27146702                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-testing-base-4.4.1.jar
+7fdd8d102000-7fdd8d109000 r--s 00043000 08:01 27146753                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/bcpg-jdk15on-1.58.jar
+7fdd8d109000-7fdd8d10b000 r--s 0000c000 08:01 27146651                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-signing-4.4.1.jar
+7fdd8d10b000-7fdd8d10d000 r--s 00007000 08:01 27146665                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-scala-4.4.1.jar
+7fdd8d10d000-7fdd8d10e000 r--s 00004000 08:01 27146723                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-resources-sftp-4.4.1.jar
+7fdd8d10e000-7fdd8d11c000 r--s 00087000 08:01 27146793                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aws-java-sdk-core-1.11.6.jar
+7fdd8d11c000-7fdd8d123000 r--s 00057000 08:01 27146792                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aws-java-sdk-kms-1.11.6.jar
+7fdd8d123000-7fdd8d130000 r--s 0008e000 08:01 27146791                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aws-java-sdk-s3-1.11.6.jar
+7fdd8d130000-7fdd8d132000 r--s 00004000 08:01 27146713                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-resources-s3-4.4.1.jar
+7fdd8d132000-7fdd8d142000 r--s 00088000 08:01 27146801                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/joda-time-2.8.2.jar
+7fdd8d142000-7fdd8d154000 r--s 0011e000 08:01 27146799                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jackson-databind-2.8.9.jar
+7fdd8d154000-7fdd8d157000 r--s 0000b000 08:01 27146797                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jackson-annotations-2.8.9.jar
+7fdd8d157000-7fdd8d15b000 r--s 00042000 08:01 27146796                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jackson-core-2.8.9.jar
+7fdd8d15b000-7fdd8d15c000 r--s 00001000 08:01 27146735                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/google-http-client-jackson2-1.22.0.jar
+7fdd8d15c000-7fdd8d165000 r--s 0004f000 08:01 27146737                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/google-http-client-1.22.0.jar
+7fdd8d165000-7fdd8d167000 r--s 0000d000 08:01 27146733                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/google-oauth-client-1.22.0.jar
+7fdd8d167000-7fdd8d16c000 r--s 0002c000 08:01 27146732                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/google-api-client-1.22.0.jar
+7fdd8d16c000-7fdd8d16f000 r--s 00016000 08:01 27146729                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/google-api-services-storage-v1-rev78-1.22.0.jar
+7fdd8d16f000-7fdd8d171000 r--s 00003000 08:01 27146716                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-resources-gcs-4.4.1.jar
+7fdd8d171000-7fdd8d173000 r--s 00010000 08:01 27146704                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-reporting-4.4.1.jar
+7fdd8d173000-7fdd8d175000 r--s 00005000 08:01 27146705                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-publish-4.4.1.jar
+7fdd8d175000-7fdd8d177000 r--s 00009000 08:01 27146740                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/commons-cli-1.2.jar
+7fdd8d177000-7fdd8d17d000 r--s 00038000 08:01 27146679                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-plugins-4.4.1.jar
+7fdd8d17d000-7fdd8d17f000 r--s 00009000 08:01 27146657                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-plugin-development-4.4.1.jar
+7fdd8d17f000-7fdd8d186000 r--s 0002e000 08:01 27146671                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-platform-play-4.4.1.jar
+7fdd8d186000-7fdd8d197000 r--s 00069000 08:01 27146699                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-platform-native-4.4.1.jar
+7fdd8d197000-7fdd8d19b000 r--s 0001b000 08:01 27146697                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-platform-jvm-4.4.1.jar
+7fdd8d19b000-7fdd8d1a2000 r--s 00028000 08:01 27146711                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-platform-base-4.4.1.jar
+7fdd8d1a2000-7fdd8d1cd000 r--s 00247000 08:01 27146743                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/biz.aQute.bndlib-3.4.0.jar
+7fdd8d1cd000-7fdd8d1ce000 r--s 00004000 08:01 27146649                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-osgi-4.4.1.jar
+7fdd8d1ce000-7fdd8d1d1000 r--s 0000c000 08:01 27146748                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/pmaven-groovy-0.8-20100325.jar
+7fdd8d1d1000-7fdd8d1d2000 r--s 00004000 08:01 27146745                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/pmaven-common-0.8-20100325.jar
+7fdd8d1d2000-7fdd8d1d8000 r--s 00025000 08:01 27146660                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-maven-4.4.1.jar
+7fdd8d1d8000-7fdd8d1db000 r--s 0000b000 08:01 27146689                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-language-scala-4.4.1.jar
+7fdd8d1db000-7fdd8d1e4000 r--s 00036000 08:01 27146656                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-language-native-4.4.1.jar
+7fdd8d1e4000-7fdd8d1e6000 r--s 00005000 08:01 27146695                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-language-jvm-4.4.1.jar
+7fdd8d1e6000-7fdd8d1ed000 r--s 00030000 08:01 27146693                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-language-java-4.4.1.jar
+7fdd8d1ed000-7fdd8d1f0000 r--s 0000a000 08:01 27146688                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-language-groovy-4.4.1.jar
+7fdd8d1f0000-7fdd8d1f7000 r--s 00035000 08:01 27146772                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/simple-4.1.21.jar
+7fdd8d1f7000-7fdd8d203000 r--s 00100000 08:01 27146755                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/rhino-1.7R3.jar
+7fdd8d203000-7fdd8d207000 r--s 00011000 08:01 27146672                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-javascript-4.4.1.jar
+7fdd8d207000-7fdd8d20a000 r--s 00011000 08:01 27146676                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-jacoco-4.4.1.jar
+7fdd8d20a000-7fdd8d20e000 r--s 0000e000 08:01 27146673                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-ivy-4.4.1.jar
+7fdd8d20e000-7fdd8d20f000 r--s 00002000 08:01 27146661                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-ide-play-4.4.1.jar
+7fdd8d20f000-7fdd8d210000 r--s 00011000 08:01 27146775                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/dd-plist-1.20.jar
+7fdd8d210000-7fdd8d216000 r--s 00027000 08:01 27146652                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-ide-native-4.4.1.jar
+7fdd8d216000-7fdd8d220000 r--s 00056000 08:01 27146663                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-ide-4.4.1.jar
+7fdd8d220000-7fdd8d222000 r--s 00007000 08:01 27146668                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-ear-4.4.1.jar
+7fdd8d222000-7fdd8d224000 r--s 00005000 08:01 27146728                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jatl-0.2.2.jar
+7fdd8d224000-7fdd8d22a000 r--s 00039000 08:01 27146700                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-diagnostics-4.4.1.jar
+7fdd8d22a000-7fdd8d22c000 r--s 0000b000 08:01 27146684                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-composite-builds-4.4.1.jar
+7fdd8d22c000-7fdd8d231000 r--s 00026000 08:01 27146645                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-code-quality-4.4.1.jar
+7fdd8d231000-7fdd8d236000 r--s 00022000 08:01 27146677                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-build-init-4.4.1.jar
+7fdd8d236000-7fdd8d23d000 r--s 0005d000 08:01 27146667                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-build-comparison-4.4.1.jar
+7fdd8d23d000-7fdd8d23e000 r--s 00002000 08:01 27146717                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-build-cache-http-4.4.1.jar
+7fdd8d23e000-7fdd8d240000 r--s 00008000 08:01 27146647                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-antlr-4.4.1.jar
+7fdd8d240000-7fdd8d242000 r--s 00004000 08:01 27146687                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-announce-4.4.1.jar
+7fdd8d242000-7fdd8d244000 r--s 00009000 08:01 27142484                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-kotlin-dsl-tooling-builders-0.13.2.jar
+7fdd8d244000-7fdd8d247000 r--s 0000b000 08:01 27146712                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-plugin-use-4.4.1.jar
+7fdd8d247000-7fdd8d248000 r--s 00000000 08:01 27146456                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-runtime-api-info-4.4.1.jar
+7fdd8d248000-7fdd8d24b000 r--s 0001c000 08:01 27146783                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/nekohtml-1.9.14.jar
+7fdd8d24b000-7fdd8d264000 r--s 00135000 08:01 27146785                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/xercesImpl-2.11.0.jar
+7fdd8d264000-7fdd8d267000 r--s 0000c000 08:01 27146721                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-resources-http-4.4.1.jar
+7fdd8d267000-7fdd8d26e000 r--s 00049000 08:01 27146855                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/httpcore-4.4.4.jar
+7fdd8d26e000-7fdd8d274000 r--s 00033000 08:01 27146751                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/commons-codec-1.6.jar
+7fdd8d274000-7fdd8d27a000 r--s 0005b000 08:01 27146781                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jcifs-1.3.17.jar
+7fdd8d27a000-7fdd8d287000 r--s 000a4000 08:01 27146739                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/httpclient-4.4.1.jar
+7fdd8d287000-7fdd8d2aa000 r--s 00223000 08:01 27146858                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/org.eclipse.jgit-4.5.3.201708160445-r.jar
+7fdd8d2aa000-7fdd8d2ab000 r--s 00005000 08:01 27146727                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-version-control-4.4.1.jar
+7fdd8d2ab000-7fdd8d2ac000 r--s 00000000 08:01 27146474                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-installation-beacon-4.4.1.jar
+7fdd8d2ac000-7fdd8d2ff000 r--s 00373000 08:01 27146804                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/bcprov-jdk15on-1.58.jar
+7fdd8d2ff000-7fdd8d303000 r--s 0001d000 08:01 27146803                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/xbean-reflect-3.4.jar
+7fdd8d303000-7fdd8d305000 r--s 0000a000 08:01 27146807                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-settings-3.0.4.jar
+7fdd8d305000-7fdd8d308000 r--s 00008000 08:01 27146808                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-settings-builder-3.0.4.jar
+7fdd8d308000-7fdd8d30b000 r--s 00034000 08:01 27146809                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-utils-2.1.jar
+7fdd8d30b000-7fdd8d30d000 r--s 0000d000 08:01 27146812                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-interpolation-1.14.jar
+7fdd8d30d000-7fdd8d30f000 r--s 00000000 08:01 27146749                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-component-annotations-1.5.5.jar
+7fdd8d30f000-7fdd8d316000 r--s 0002e000 08:01 27146813                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-container-default-1.5.5.jar
+7fdd8d316000-7fdd8d318000 r--s 0000a000 08:01 27146815                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-classworlds-2.4.jar
+7fdd8d318000-7fdd8d31a000 r--s 00002000 08:01 27146817                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-cipher-1.7.jar
+7fdd8d31a000-7fdd8d31b000 r--s 00006000 08:01 27146819                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/plexus-sec-dispatcher-1.3.jar
+7fdd8d31b000-7fdd8d321000 r--s 0003f000 08:01 27146820                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-compat-3.0.4.jar
+7fdd8d321000-7fdd8d325000 r--s 00021000 08:01 27146823                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-model-builder-3.0.4.jar
+7fdd8d325000-7fdd8d327000 r--s 00026000 08:01 27146824                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-model-3.0.4.jar
+7fdd8d327000-7fdd8d329000 r--s 0000b000 08:01 27146825                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-artifact-3.0.4.jar
+7fdd8d329000-7fdd8d32b000 r--s 00006000 08:01 27146828                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-repository-metadata-3.0.4.jar
+7fdd8d32b000-7fdd8d32d000 r--s 0000b000 08:01 27146829                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-plugin-api-3.0.4.jar
+7fdd8d32d000-7fdd8d32f000 r--s 0000c000 08:01 27146831                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-aether-provider-3.0.4.jar
+7fdd8d32f000-7fdd8d330000 r--s 00002000 08:01 27146833                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/wagon-file-2.4.jar
+7fdd8d330000-7fdd8d331000 r--s 00002000 08:01 27146835                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/wagon-http-2.4.jar
+7fdd8d331000-7fdd8d333000 r--s 0000b000 08:01 27146836                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/wagon-provider-api-2.4.jar
+7fdd8d333000-7fdd8d334000 r--s 00007000 08:01 27146839                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/wagon-http-shared4-2.4.jar
+7fdd8d334000-7fdd8d337000 r--s 00013000 08:01 27146840                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aether-api-1.13.1.jar
+7fdd8d337000-7fdd8d33a000 r--s 0001d000 08:01 27146841                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aether-impl-1.13.1.jar
+7fdd8d33a000-7fdd8d33e000 r--s 0001c000 08:01 27146845                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aether-util-1.13.1.jar
+7fdd8d33e000-7fdd8d340000 r--s 00006000 08:01 27146847                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aether-connector-wagon-1.13.1.jar
+7fdd8d340000-7fdd8d34c000 r--s 0007d000 08:01 27146744                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/maven-core-3.0.4.jar
+7fdd8d34c000-7fdd8d351000 r--s 00034000 08:01 27146756                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gson-2.7.jar
+7fdd8d351000-7fdd8d377000 r--s 00133000 08:01 27146719                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-dependency-management-4.4.1.jar
+7fdd8d377000-7fdd8d38d000 r-xp 00000000 08:01 21893511                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd8d38d000-7fdd8d58c000 ---p 00016000 08:01 21893511                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd8d58c000-7fdd8d58d000 rw-p 00015000 08:01 21893511                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd8d58d000-7fdd8d6ff000 r-xp 00000000 08:01 15205561                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7fdd8d6ff000-7fdd8d8ff000 ---p 00172000 08:01 15205561                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7fdd8d8ff000-7fdd8d909000 r--p 00172000 08:01 15205561                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7fdd8d909000-7fdd8d90b000 rw-p 0017c000 08:01 15205561                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7fdd8d90b000-7fdd8d90f000 rw-p 00000000 00:00 0 
+7fdd8d90f000-7fdd8d910000 r--s 00003000 08:01 27146844                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/aether-spi-1.13.1.jar
+7fdd8d910000-7fdd8d915000 r--s 00040000 08:01 27146788                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/jsch-0.1.54.jar
+7fdd8d915000-7fdd8d924000 r--s 000d9000 08:01 27146787                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/ivy-2.2.0.jar
+7fdd8d924000-7fdd8d927000 r--s 0000d000 08:01 27146724                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/plugins/gradle-workers-4.4.1.jar
+7fdd8d927000-7fdd8d92c000 r-xp 00000000 08:01 15743950                   /home/anulom/.gradle/native/25/linux-amd64/libnative-platform.so
+7fdd8d92c000-7fdd8db2b000 ---p 00005000 08:01 15743950                   /home/anulom/.gradle/native/25/linux-amd64/libnative-platform.so
+7fdd8db2b000-7fdd8db2c000 rw-p 00004000 08:01 15743950                   /home/anulom/.gradle/native/25/linux-amd64/libnative-platform.so
+7fdd8db2c000-7fdd8db3d000 r-xp 00000000 08:01 13631712                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnio.so
+7fdd8db3d000-7fdd8dd3c000 ---p 00011000 08:01 13631712                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnio.so
+7fdd8dd3c000-7fdd8dd3d000 r--p 00010000 08:01 13631712                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnio.so
+7fdd8dd3d000-7fdd8dd3e000 rw-p 00011000 08:01 13631712                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnio.so
+7fdd8dd3e000-7fdd8dd54000 r-xp 00000000 08:01 13631710                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnet.so
+7fdd8dd54000-7fdd8df54000 ---p 00016000 08:01 13631710                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnet.so
+7fdd8df54000-7fdd8df55000 r--p 00016000 08:01 13631710                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnet.so
+7fdd8df55000-7fdd8df56000 rw-p 00017000 08:01 13631710                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libnet.so
+7fdd8df56000-7fdd8df57000 r--s 00006000 08:01 27146465                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-wrapper-4.4.1.jar
+7fdd8df57000-7fdd8df65000 r--s 00046000 08:01 27146457                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-tooling-api-4.4.1.jar
+7fdd8df65000-7fdd8df66000 r--s 00002000 08:01 27144472                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kotlin-stdlib-jre8-1.1.51.jar
+7fdd8df66000-7fdd8df67000 r--s 00000000 08:01 27143011                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kotlin-stdlib-jre7-1.1.51.jar
+7fdd8df67000-7fdd8df76000 r--s 000c9000 08:01 27142973                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kotlin-stdlib-1.1.51.jar
+7fdd8df76000-7fdd8df78000 r--s 00002000 08:01 27142945                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kotlin-sam-with-receiver-compiler-plugin-1.1.51.jar
+7fdd8df78000-7fdd8dfab000 r--s 0022b000 08:01 27142593                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kotlin-reflect-1.1.51.jar
+7fdd8dfab000-7fdd8e18d000 r--s 01a42000 08:01 27142581                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kotlin-compiler-embeddable-1.1.51.jar
+7fdd8e18d000-7fdd8e18e000 r--s 00000000 08:01 27142574                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-kotlin-dsl-tooling-models-0.13.2.jar
+7fdd8e18e000-7fdd8e190000 r--s 00003000 08:01 27142416                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/annotations-13.0.jar
+7fdd8e190000-7fdd8e19b000 r--s 00082000 08:01 27142469                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-kotlin-dsl-0.13.2.jar
+7fdd8e19b000-7fdd8e19f000 r--s 00012000 08:01 27146516                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-build-cache-4.4.1.jar
+7fdd8e19f000-7fdd8e1a5000 r--s 0002e000 08:01 27146522                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-persistent-cache-4.4.1.jar
+7fdd8e1a5000-7fdd8e1a9000 r--s 00014000 08:01 27146521                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-resources-4.4.1.jar
+7fdd8e1a9000-7fdd8e1aa000 r--s 00003000 08:01 27146568                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-build-option-4.4.1.jar
+7fdd8e1aa000-7fdd8e1ac000 r--s 00005000 08:01 27146569                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-cli-4.4.1.jar
+7fdd8e1ac000-7fdd8e1ae000 r--s 00003000 08:01 27146579                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/jcl-over-slf4j-1.7.10.jar
+7fdd8e1ae000-7fdd8e1af000 r--s 00005000 08:01 27146578                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/log4j-over-slf4j-1.7.10.jar
+7fdd8e1af000-7fdd8e1b1000 r--s 00000000 08:01 27146577                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/jul-to-slf4j-1.7.10.jar
+7fdd8e1b1000-7fdd8e1b8000 r--s 0002f000 08:01 27146517                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-logging-4.4.1.jar
+7fdd8e1b8000-7fdd8e1c8000 r--s 00082000 08:01 27146527                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-model-core-4.4.1.jar
+7fdd8e1c8000-7fdd8e1ca000 r--s 00006000 08:01 27146562                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-base-services-groovy-4.4.1.jar
+7fdd8e1ca000-7fdd8e1cc000 r--s 00007000 08:01 27146524                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-model-groovy-4.4.1.jar
+7fdd8e1cc000-7fdd8e1cd000 r--s 00002000 08:01 27146608                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-docs-4.4.1.jar
+7fdd8e1cd000-7fdd8e1d6000 r--s 0002d000 08:01 27146607                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/xml-apis-1.4.01.jar
+7fdd8e1d6000-7fdd8e1e0000 r--s 00078000 08:01 27146605                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/commons-compress-1.14.jar
+7fdd8e1e0000-7fdd8e1ed000 r--s 00083000 08:01 27146600                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/commons-collections-3.2.2.jar
+7fdd8e1ed000-7fdd8e1ee000 r--s 00000000 08:01 27146598                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/javax.inject-1.jar
+7fdd8e1ee000-7fdd8e25e000 r--s 00646000 08:01 27146588                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/groovy-all-2.4.12.jar
+7fdd8e25e000-7fdd8e261000 r--s 00023000 08:01 27146611                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/jansi-1.14.jar
+7fdd8e261000-7fdd8e262000 r--s 00004000 08:01 27146615                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-freebsd-amd64-libcpp-0.14.jar
+7fdd8e262000-7fdd8e263000 r--s 00004000 08:01 27146617                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-freebsd-amd64-libstdcpp-0.14.jar
+7fdd8e263000-7fdd8e264000 r--s 00004000 08:01 27146619                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-freebsd-i386-libcpp-0.14.jar
+7fdd8e264000-7fdd8e265000 r--s 00003000 08:01 27146620                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-freebsd-i386-libstdcpp-0.14.jar
+7fdd8e265000-7fdd8e266000 r--s 00002000 08:01 27146623                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-linux-amd64-0.14.jar
+7fdd8e266000-7fdd8e267000 r--s 00002000 08:01 27146624                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-linux-i386-0.14.jar
+7fdd8e267000-7fdd8e269000 r--s 00002000 08:01 27146625                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-osx-amd64-0.14.jar
+7fdd8e269000-7fdd8e26a000 r--s 00003000 08:01 27146628                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-osx-i386-0.14.jar
+7fdd8e26a000-7fdd8e26c000 r--s 0000b000 08:01 27146629                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-windows-amd64-0.14.jar
+7fdd8e26c000-7fdd8e26d000 r--s 0000b000 08:01 27146631                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-windows-i386-0.14.jar
+7fdd8e26d000-7fdd8e26e000 r--s 00001000 08:01 27146633                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-linux-amd64-ncurses5-0.14.jar
+7fdd8e26e000-7fdd8e26f000 r--s 00001000 08:01 27146635                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-linux-amd64-ncurses6-0.14.jar
+7fdd8e26f000-7fdd8e270000 r--s 00001000 08:01 27146636                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-linux-i386-ncurses5-0.14.jar
+7fdd8e270000-7fdd8e271000 r--s 00001000 08:01 27146639                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-linux-i386-ncurses6-0.14.jar
+7fdd8e271000-7fdd8e275000 r--s 00012000 08:01 27146602                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/native-platform-0.14.jar
+7fdd8e275000-7fdd8e278000 r--s 0000c000 08:01 27146523                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-native-4.4.1.jar
+7fdd8e278000-7fdd8e27a000 r--s 0000f000 08:01 27146572                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/reflectasm-1.07-shaded.jar
+7fdd8e27a000-7fdd8e27c000 r--s 00000000 08:01 27146640                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/minlog-1.2.jar
+7fdd8e27c000-7fdd8e27e000 r--s 00007000 08:01 27146641                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/objenesis-1.2.jar
+7fdd8e27e000-7fdd8e282000 r--s 00026000 08:01 27146571                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/kryo-2.20.jar
+7fdd8e282000-7fdd8e288000 r--s 0002b000 08:01 27146563                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-messaging-4.4.1.jar
+7fdd8e288000-7fdd8e28a000 r--s 00006000 08:01 27146518                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-process-services-4.4.1.jar
+7fdd8e28a000-7fdd8e28f000 r--s 00041000 08:01 27146585                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/commons-lang-2.6.jar
+7fdd8e28f000-7fdd8e2b7000 r--s 001cf000 08:01 27146583                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/guava-jdk5-17.0.jar
+7fdd8e2b7000-7fdd8e2d6000 r--s 001d5000 08:01 27146594                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/ant-1.9.9.jar
+7fdd8e2d6000-7fdd8e312000 r--s 00204000 08:01 27146478                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-core-4.4.1.jar
+7fdd8e312000-7fdd8e31e000 r--s 00032000 08:01 27146515                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-core-api-4.4.1.jar
+7fdd8e31e000-7fdd8e31f000 ---p 00000000 00:00 0 
+7fdd8e31f000-7fdd8e41f000 rw-p 00000000 00:00 0 
+7fdd8e41f000-7fdd8e422000 ---p 00000000 00:00 0 
+7fdd8e422000-7fdd8e520000 rw-p 00000000 00:00 0 
+7fdd8e520000-7fdd8e523000 ---p 00000000 00:00 0 
+7fdd8e523000-7fdd8e621000 rw-p 00000000 00:00 0 
+7fdd8e621000-7fdd8e624000 ---p 00000000 00:00 0 
+7fdd8e624000-7fdd8e722000 rw-p 00000000 00:00 0 
+7fdd8e722000-7fdd8e725000 ---p 00000000 00:00 0 
+7fdd8e725000-7fdd8e823000 rw-p 00000000 00:00 0 
+7fdd8e823000-7fdd8eafb000 r--p 00000000 08:01 15205253                   /usr/lib/locale/locale-archive
+7fdd8eafb000-7fdd8eafe000 ---p 00000000 00:00 0 
+7fdd8eafe000-7fdd8ebfc000 rw-p 00000000 00:00 0 
+7fdd8ebfc000-7fdd8ebff000 ---p 00000000 00:00 0 
+7fdd8ebff000-7fdd8ecfd000 rw-p 00000000 00:00 0 
+7fdd8ecfd000-7fdd8ecfe000 ---p 00000000 00:00 0 
+7fdd8ecfe000-7fdd91000000 rw-p 00000000 00:00 0 
+7fdd91000000-7fdd92b30000 rwxp 00000000 00:00 0 
+7fdd92b30000-7fdda0000000 ---p 00000000 00:00 0 
+7fdda0000000-7fdda0db7000 rw-p 00000000 00:00 0 
+7fdda0db7000-7fdda4000000 ---p 00000000 00:00 0 
+7fdda4000000-7fdda4002000 r--s 00000000 08:01 27146483                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-jvm-services-4.4.1.jar
+7fdda4002000-7fdda4003000 r--s 00000000 08:01 27146586                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/jcip-annotations-1.0.jar
+7fdda4003000-7fdda4006000 r--s 00006000 08:01 27146584                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/jsr305-1.3.9.jar
+7fdda4006000-7fdda400a000 r--s 00027000 08:01 27146574                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/commons-io-2.2.jar
+7fdda400a000-7fdda4015000 r--s 0005b000 08:01 27146566                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-base-services-4.4.1.jar
+7fdda4015000-7fdda478b000 rw-p 00000000 00:00 0 
+7fdda478b000-7fdda495b000 r--s 03c46000 08:01 13631680                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/rt.jar
+7fdda495b000-7fdda53d1000 rw-p 00000000 00:00 0 
+7fdda53d1000-7fdda53d2000 ---p 00000000 00:00 0 
+7fdda53d2000-7fdda54d2000 rw-p 00000000 00:00 0 
+7fdda54d2000-7fdda54d3000 ---p 00000000 00:00 0 
+7fdda54d3000-7fdda5610000 rw-p 00000000 00:00 0 
+7fdda5610000-7fdda5729000 ---p 00000000 00:00 0 
+7fdda5729000-7fdda5766000 rw-p 00000000 00:00 0 
+7fdda5766000-7fdda587e000 ---p 00000000 00:00 0 
+7fdda587e000-7fdda58e6000 rw-p 00000000 00:00 0 
+7fdda58e6000-7fdda5929000 ---p 00000000 00:00 0 
+7fdda5929000-7fdda5997000 rw-p 00000000 00:00 0 
+7fdda5997000-7fdda5cea000 ---p 00000000 00:00 0 
+7fdda5cea000-7fdda5d04000 r-xp 00000000 08:01 13631707                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libzip.so
+7fdda5d04000-7fdda5f04000 ---p 0001a000 08:01 13631707                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libzip.so
+7fdda5f04000-7fdda5f05000 r--p 0001a000 08:01 13631707                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libzip.so
+7fdda5f05000-7fdda5f06000 rw-p 0001b000 08:01 13631707                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libzip.so
+7fdda5f06000-7fdda5f11000 r-xp 00000000 08:01 21895883                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fdda5f11000-7fdda6110000 ---p 0000b000 08:01 21895883                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fdda6110000-7fdda6111000 r--p 0000a000 08:01 21895883                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fdda6111000-7fdda6112000 rw-p 0000b000 08:01 21895883                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fdda6112000-7fdda6118000 rw-p 00000000 00:00 0 
+7fdda6118000-7fdda6123000 r-xp 00000000 08:01 21895891                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fdda6123000-7fdda6322000 ---p 0000b000 08:01 21895891                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fdda6322000-7fdda6323000 r--p 0000a000 08:01 21895891                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fdda6323000-7fdda6324000 rw-p 0000b000 08:01 21895891                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fdda6324000-7fdda633a000 r-xp 00000000 08:01 21895853                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fdda633a000-7fdda6539000 ---p 00016000 08:01 21895853                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fdda6539000-7fdda653a000 r--p 00015000 08:01 21895853                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fdda653a000-7fdda653b000 rw-p 00016000 08:01 21895853                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fdda653b000-7fdda653d000 rw-p 00000000 00:00 0 
+7fdda653d000-7fdda6545000 r-xp 00000000 08:01 21895873                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fdda6545000-7fdda6744000 ---p 00008000 08:01 21895873                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fdda6744000-7fdda6745000 r--p 00007000 08:01 21895873                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fdda6745000-7fdda6746000 rw-p 00008000 08:01 21895873                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fdda6746000-7fdda6773000 r-xp 00000000 08:01 13631717                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libjava.so
+7fdda6773000-7fdda6972000 ---p 0002d000 08:01 13631717                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libjava.so
+7fdda6972000-7fdda6973000 r--p 0002c000 08:01 13631717                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libjava.so
+7fdda6973000-7fdda6975000 rw-p 0002d000 08:01 13631717                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libjava.so
+7fdda6975000-7fdda6985000 r-xp 00000000 08:01 13631733                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libverify.so
+7fdda6985000-7fdda6b84000 ---p 00010000 08:01 13631733                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libverify.so
+7fdda6b84000-7fdda6b86000 r--p 0000f000 08:01 13631733                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libverify.so
+7fdda6b86000-7fdda6b87000 rw-p 00011000 08:01 13631733                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/libverify.so
+7fdda6b87000-7fdda6b8e000 r-xp 00000000 08:01 21895893                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fdda6b8e000-7fdda6d8d000 ---p 00007000 08:01 21895893                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fdda6d8d000-7fdda6d8e000 r--p 00006000 08:01 21895893                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fdda6d8e000-7fdda6d8f000 rw-p 00007000 08:01 21895893                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fdda6d8f000-7fdda6e97000 r-xp 00000000 08:01 21895851                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fdda6e97000-7fdda7096000 ---p 00108000 08:01 21895851                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fdda7096000-7fdda7097000 r--p 00107000 08:01 21895851                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fdda7097000-7fdda7098000 rw-p 00108000 08:01 21895851                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fdda7098000-7fdda7c90000 r-xp 00000000 08:01 13631737                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fdda7c90000-7fdda7e90000 ---p 00bf8000 08:01 13631737                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fdda7e90000-7fdda7f2f000 r--p 00bf8000 08:01 13631737                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fdda7f2f000-7fdda7f58000 rw-p 00c97000 08:01 13631737                   /home/anulom/.local/share/umake/android/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fdda7f58000-7fdda7f9c000 rw-p 00000000 00:00 0 
+7fdda7f9c000-7fdda7fb4000 r-xp 00000000 08:01 21895858                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fdda7fb4000-7fdda81b3000 ---p 00018000 08:01 21895858                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fdda81b3000-7fdda81b4000 r--p 00017000 08:01 21895858                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fdda81b4000-7fdda81b5000 rw-p 00018000 08:01 21895858                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fdda81b5000-7fdda81b9000 rw-p 00000000 00:00 0 
+7fdda81b9000-7fdda81bc000 r-xp 00000000 08:01 21895864                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fdda81bc000-7fdda83bb000 ---p 00003000 08:01 21895864                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fdda83bb000-7fdda83bc000 r--p 00002000 08:01 21895864                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fdda83bc000-7fdda83bd000 rw-p 00003000 08:01 21895864                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fdda83bd000-7fdda857d000 r-xp 00000000 08:01 21895859                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fdda857d000-7fdda877d000 ---p 001c0000 08:01 21895859                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fdda877d000-7fdda8781000 r--p 001c0000 08:01 21895859                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fdda8781000-7fdda8783000 rw-p 001c4000 08:01 21895859                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fdda8783000-7fdda8787000 rw-p 00000000 00:00 0 
+7fdda8787000-7fdda879d000 r-xp 00000000 08:01 13631597                   /home/anulom/.local/share/umake/android/android-studio/jre/lib/amd64/jli/libjli.so
+7fdda879d000-7fdda899c000 ---p 00016000 08:01 13631597                   /home/anulom/.local/share/umake/android/android-studio/jre/lib/amd64/jli/libjli.so
+7fdda899c000-7fdda899d000 r--p 00015000 08:01 13631597                   /home/anulom/.local/share/umake/android/android-studio/jre/lib/amd64/jli/libjli.so
+7fdda899d000-7fdda899e000 rw-p 00016000 08:01 13631597                   /home/anulom/.local/share/umake/android/android-studio/jre/lib/amd64/jli/libjli.so
+7fdda899e000-7fdda89c4000 r-xp 00000000 08:01 21895856                   /lib/x86_64-linux-gnu/ld-2.23.so
+7fdda89c4000-7fdda89cc000 r--s 000bd000 08:01 27146573                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/asm-debug-all-6.0_ALPHA.jar
+7fdda89cc000-7fdda8aa5000 rw-p 00000000 00:00 0 
+7fdda8aa5000-7fdda8aa8000 ---p 00000000 00:00 0 
+7fdda8aa8000-7fdda8baa000 rw-p 00000000 00:00 0 
+7fdda8baa000-7fdda8bab000 r--s 00007000 08:01 27146580                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/slf4j-api-1.7.10.jar
+7fdda8bab000-7fdda8bac000 r--s 00004000 08:01 27146612                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/ant-launcher-1.9.9.jar
+7fdda8bac000-7fdda8bb8000 r--s 0005f000 08:01 27144646                   /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-launcher-4.4.1.jar
+7fdda8bb8000-7fdda8bc0000 rw-s 00000000 08:01 16399864                   /tmp/hsperfdata_anulom/2994
+7fdda8bc0000-7fdda8bc1000 rw-p 00000000 00:00 0 
+7fdda8bc1000-7fdda8bc2000 r--p 00000000 00:00 0 
+7fdda8bc2000-7fdda8bc3000 rw-p 00000000 00:00 0 
+7fdda8bc3000-7fdda8bc4000 r--p 00025000 08:01 21895856                   /lib/x86_64-linux-gnu/ld-2.23.so
+7fdda8bc4000-7fdda8bc5000 rw-p 00026000 08:01 21895856                   /lib/x86_64-linux-gnu/ld-2.23.so
+7fdda8bc5000-7fdda8bc6000 rw-p 00000000 00:00 0 
+7ffec1484000-7ffec14a5000 rw-p 00000000 00:00 0                          [stack]
+7ffec15f5000-7ffec15f8000 r--p 00000000 00:00 0                          [vvar]
+7ffec15f8000-7ffec15fa000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -XX:+HeapDumpOnOutOfMemoryError -Xmx1024m -Dfile.encoding=UTF-8 -Duser.country=IN -Duser.language=en -Duser.variant 
+java_command: org.gradle.launcher.daemon.bootstrap.GradleDaemon 4.4.1
+java_class_path (initial): /home/anulom/.gradle/wrapper/dists/gradle-4.4.1-all/2kpyt0ea6hyxavvt21uml23gd/gradle-4.4.1/lib/gradle-launcher-4.4.1.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/anulom/.local/share/umake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH=/home/anulom/.local/share/umake/android/android-studio/bin:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9ebc60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0x9ebc60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x84cf60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x84cf60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x84cf60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x84cf60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x84ce30], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x84d020], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x84d020], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x84d020], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x84d020], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.3 LTS"
+
+uname:Linux 4.4.0-119-generic #143-Ubuntu SMP Mon Apr 2 16:08:24 UTC 2018 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 31261, NOFILE 1048576, AS infinity
+load average:0.64 0.61 0.72
+
+/proc/meminfo:
+MemTotal:        8043576 kB
+MemFree:          142068 kB
+MemAvailable:    1788424 kB
+Buffers:          210296 kB
+Cached:          2702860 kB
+SwapCached:            0 kB
+Active:          5487516 kB
+Inactive:        2120076 kB
+Active(anon):    4588704 kB
+Inactive(anon):  1226312 kB
+Active(file):     898812 kB
+Inactive(file):   893764 kB
+Unevictable:          72 kB
+Mlocked:              72 kB
+SwapTotal:       4060156 kB
+SwapFree:        4053444 kB
+Dirty:              3204 kB
+Writeback:             0 kB
+AnonPages:       4694508 kB
+Mapped:           762496 kB
+Shmem:           1120436 kB
+Slab:             182088 kB
+SReclaimable:     146412 kB
+SUnreclaim:        35676 kB
+KernelStack:       11344 kB
+PageTables:        45424 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     8081944 kB
+Committed_AS:   10778696 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1345536 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      128444 kB
+DirectMap2M:     6031360 kB
+DirectMap1G:     3145728 kB
+
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, clmul, erms, lzcnt, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Pentium(R) CPU G3240 @ 3.10GHz
+stepping	: 3
+microcode	: 0x24
+cpu MHz		: 3100.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer xsave rdrand lahf_lm abm epb invpcid_single spec_ctrl retpoline kaiser tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust erms invpcid xsaveopt dtherm arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 6186.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Pentium(R) CPU G3240 @ 3.10GHz
+stepping	: 3
+microcode	: 0x24
+cpu MHz		: 3100.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer xsave rdrand lahf_lm abm epb invpcid_single spec_ctrl retpoline kaiser tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust erms invpcid xsaveopt dtherm arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 6186.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8043576k(142068k free), swap 4060156k(4053444k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b01) for linux-amd64 JRE (1.8.0_152-release-915-b01), built by "builder" with gcc 4.8.4
+
+time: Wed May  2 16:01:29 2018
+elapsed time: 2005 seconds (0d 0h 33m 25s)
+
